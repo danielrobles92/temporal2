@@ -1,0 +1,112 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-13 Editar publicación
+autonumber
+
+actor "Responsable de la publicación" as U
+participant "Interfaz web\n(Mis Anuncios)" as W
+participant "OpenStreetMap\n(Nominatim)" as MAP
+participant "API REST\n(PetsController)" as A
+participant "Servicio de IA\n(ml-service DogNet v2)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor es el responsable de la publicación o el Administrador (RN-09) y la publicación existe (CU-12).
+
+U -> W : Seleccionar «Editar» en una publicación
+activate W
+W --> U : Formulario «Editar publicación» con los datos actuales
+U -> W : Modificar nombre, raza, color, edad, tamaño, estado (Disponible,\nAdoptado o Inactivo), ubicación, referencia o colonia y descripción
+opt ajustar el punto en el mapa
+  U -> W : Ajustar el punto en el mapa
+  W -> MAP : Obtener la dirección del punto (GET /reverse)
+  activate MAP
+  MAP --> W : Calle, colonia y alcaldía
+  deactivate MAP
+end
+U -> W : Seleccionar hasta 4 fotografías nuevas\n(opcional; reemplazan a las actuales)
+opt FA-13-A: más de 4 fotos o alguna de más de 5 MB
+  W --> U : «Selecciona máximo 4 fotos» (conserva las 4 primeras)\no «Cada foto debe pesar menos de 5 MB»
+end
+note right of W : FA-13-B: si no elige fotos nuevas,\nse conservan las actuales.
+break FA-13-E: selecciona «Cancelar»
+  W --> U : Cerrar el formulario sin guardar
+end
+U -> W : Seleccionar «Guardar cambios»
+alt operación exitosa
+  W -> A : Actualizar publicación (PUT /pets/updatePet/{id};\nJSON, o multipart si hay fotos nuevas)
+  activate A
+  A -> DB : Consultar la publicación (pets)
+  activate DB
+  DB --> A : Responsable de la publicación
+  deactivate DB
+  A -> A : Verificar que sea el responsable o el Administrador (RN-09)
+  break FA-13-D: no es el responsable ni el Administrador
+    A --> W : 403 «No autorizado»
+    W --> U : Mostrar el error
+  end
+  opt hay fotos nuevas
+    A -> IA : Verificar que sean perros (POST /describe)
+    activate IA
+    IA --> A : Resultado
+    deactivate IA
+    break FA-13-C: una foto nueva no es de perro
+      A --> W : 422 con el motivo
+      W --> U : Mostrar el motivo
+    end
+    A -> A : Guardar los archivos de las fotos
+  end
+  A -> DB : Actualizar publicación (UPDATE pets;\nreemplaza pet_images si hay fotos nuevas)
+  activate DB
+  DB --> A : Publicación actualizada
+  deactivate DB
+  opt hay fotos nuevas
+    loop para cada foto
+      A -> IA : Obtener vector y raza (POST /analyze)
+      activate IA
+      IA --> A : Vector y raza
+      deactivate IA
+      A -> DB : Guardar vector (INSERT pet_image_embeddings)
+      activate DB
+      DB --> A : Guardado
+      deactivate DB
+    end
+  end
+  A --> W : 200 Publicación
+  deactivate A
+  W --> U : «Publicación actualizada»
+else FA-13-F: error al guardar
+  W --> U : «No se pudo actualizar la publicación» y conservar el formulario
+end
+deactivate W
+
+note over U, DB : Postcondición: la publicación queda actualizada; si su estado cambia a Adoptado o Inactivo, deja de mostrarse como disponible.
+@enduml

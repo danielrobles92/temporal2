@@ -1,0 +1,21 @@
+{
+  "elegido": "2026-11-10 con experiments/banco_varios_perros.py (resultados_varios_perros.json)",
+  "multi_view": false,
+  "params": {
+    "min_score": 0.3,
+    "merge_inside": 0.8,
+    "min_rel_area": 0.0,
+    "min_area": 0.0,
+    "min_dog_prob": 0.0
+  },
+  "medido": {
+    "criterio": "maxima deteccion de fotos con varios perros con a lo mas 1 % de fotos de un perro rechazadas por error (elegido en dev, medido en test)",
+    "test": {"un_perro_rechazado": "6/1058 (0.57 %)", "varios_detectados": "83/111 (74.8 %)"},
+    "todas_las_fotos": {"un_perro_rechazado": "13/2122 (0.61 %)", "varios_detectados": "167/221 (75.6 %)"},
+    "descartadas": {
+      "cuatro_vistas_corte": "todas las fotos: 0.90 % rechazadas por error, 79.2 % detectadas; 4 pasadas del detector",
+      "cuatro_vistas_sin_corte": "test: 12.4 % rechazadas por error (pedazos de un perro contados como perros distintos)",
+      "confirmar_con_dognet": "deteccion 76 % -> 60 % en dev sin reducir los rechazos por error"
+    }
+  }
+}

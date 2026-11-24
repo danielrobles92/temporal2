@@ -1,0 +1,226 @@
+.match-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.ms-empty {
+  color: var(--text-soft);
+}
+
+.ms-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+}
+
+.ms-card {
+  align-items: flex-start;
+}
+
+.ms-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex: 0 0 auto;
+}
+
+.ms-thumb-link {
+  flex: 0 0 auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.ms-thumb-link:hover .ms-thumb,
+.ms-thumb-link:focus-visible .ms-thumb {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.ms-name {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.ms-name:hover,
+.ms-name:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.ms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ms-actions .btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.ms-thumb-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: var(--surface);
+}
+
+.ms-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ms-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ms-breed {
+  font-size: 0.78rem;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.ms-conf {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.ms-conf-pct {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.ms-conf.high .ms-conf-pct { color: #2e7d32; }
+.ms-conf.mid .ms-conf-pct { color: #b8860b; }
+.ms-conf.low .ms-conf-pct { color: var(--text-soft); }
+
+.ms-conf-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.ms-meta {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+/* Porcentaje de coincidencia (MatchScore) */
+.match-score {
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.match-score.high { background: #e8f5e9; border-color: #66bb6a; }
+.match-score.mid { background: #fff8e1; border-color: #ffca28; }
+
+.match-score-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.match-score-pct {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-soft);
+}
+
+.match-score.high .match-score-pct { color: #2e7d32; }
+.match-score.mid .match-score-pct { color: #b8860b; }
+
+.match-score-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+/* «En el análisis se identificó»: cada perro lado a lado (✓ rasgo en común, ≠ distinto). */
+.match-ai {
+  width: 100%;
+  /* Columnas fijas: en tarjetas angostas el texto se parte en vez de salirse del recuadro. */
+  table-layout: fixed;
+  margin-top: 8px;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  background: var(--surface);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.match-ai caption {
+  padding-bottom: 4px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.match-ai th,
+.match-ai td {
+  padding: 4px 5px;
+  overflow-wrap: break-word;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.match-ai thead th {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.match-ai thead th:first-child,
+.match-ai tbody th {
+  width: 34%;
+}
+
+.match-ai tbody th {
+  font-weight: 700;
+}
+
+.match-ai tr.is-same td,
+.match-ai tr.is-same th {
+  background: #f1f8f2;
+}
+
+.match-ai tr.is-diff td {
+  color: var(--text-soft);
+}
+
+.match-ai-mark {
+  display: inline-block;
+  width: 1.1em;
+  font-weight: 800;
+}
+
+.match-ai tr.is-same .match-ai-mark { color: #2e7d32; }
+.match-ai tr.is-diff .match-ai-mark { color: #b45309; }
+
+.match-score.is-compact .match-ai {
+  font-size: 0.76rem;
+}

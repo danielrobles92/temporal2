@@ -1,0 +1,75 @@
+spring:
+  application:
+    name: petproject
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pet_adoption
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    # No escribir cada consulta SQL en la consola: con carga concurrente frena el backend (RNF-10).
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: false
+        # Fotos y vacunas de varios perros en una sola consulta (evita N+1 en el catálogo; RNF-10).
+        default_batch_fetch_size: 100
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 20MB
+
+  # Nunca mandar el stack trace ni el mensaje interno de un error no controlado (SQL, clases).
+  # DevTools los activa por omision al correr con spring-boot:run, que es como se publica la
+  # demo (PF-16). Los mensajes para el usuario pasan por ApiExceptionHandler y no se afectan.
+  # En Spring Boot 4 la propiedad es spring.web.error.* (server.error.* ya no tiene efecto).
+  web:
+    error:
+      include-stacktrace: never
+      include-message: never
+
+server:
+  port: 8080
+
+app:
+  upload-dir: uploads
+
+# Microservicio de reconocimiento de imagenes (FastAPI + EfficientNetB0)
+mlservice:
+  base-url: http://localhost:8000
+  timeout-ms: 15000
+
+# Seguridad: el secreto JWT DEBE venir de la variable de entorno JWT_SECRET en
+# produccion. El valor por defecto es solo para desarrollo local (rotado).
+jwt:
+  secret: ${JWT_SECRET:perreque_jwt_dev_2026_CAMBIAR_en_produccion__a7Fx93Qm2Lp8Zr5}
+  expiration-ms: 14400000   # 4 horas
+  remember-expiration-ms: 604800000   # 7 dias con "Recordarme"
+
+# Proteccion contra fuerza bruta en el login
+security:
+  login:
+    max-attempts: 5
+    lock-minutes: 15
+
+# Correo para el codigo de "Olvidaste tu contrasena" (CU-43). Con Gmail: activar la
+# verificacion en dos pasos, crear una "contrasena de aplicacion" y definir las variables
+# de entorno MAIL_USERNAME (la cuenta) y MAIL_PASSWORD (la contrasena de aplicacion).
+# Sin ellas, el codigo se escribe en el log del backend.
+spring.mail:
+  host: ${MAIL_HOST:smtp.gmail.com}
+  port: ${MAIL_PORT:587}
+  username: ${MAIL_USERNAME:}
+  password: ${MAIL_PASSWORD:}
+  properties:
+    mail.smtp.auth: true
+    mail.smtp.starttls.enable: true
+    mail.smtp.connectiontimeout: 5000
+    mail.smtp.timeout: 5000
+    mail.smtp.writetimeout: 5000

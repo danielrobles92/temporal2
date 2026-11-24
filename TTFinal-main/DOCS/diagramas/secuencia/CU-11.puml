@@ -1,0 +1,112 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-11 Publicar perro en adopción
+autonumber
+
+actor "Refugio" as U
+participant "Interfaz web\n(Publicar Anuncio)" as W
+participant "OpenStreetMap\n(Nominatim)" as MAP
+participant "API REST\n(PetsController)" as A
+participant "Servicio de IA\n(ml-service DogNet v2)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el Refugio ha iniciado sesión con una cuenta activa de rol Refugio, creada o asignada por el Administrador (CU-36 o CU-20).
+
+U -> W : Seleccionar «Publicar Anuncio»
+activate W
+W --> U : Formulario con el tipo «Perro en adopción» seleccionado
+U -> W : Capturar nombre, raza, sexo, color, tamaño y ubicación (alcaldía);\nde forma opcional, edad, referencia o colonia y descripción
+break FA-11-F: selecciona «Cancelar»
+  W --> U : Regresar a la pantalla anterior sin registrar
+end
+U -> W : Marcar el punto en el mapa
+W -> MAP : Obtener la dirección del punto (GET /reverse lat, lon)
+activate MAP
+MAP --> W : Calle, colonia y alcaldía
+deactivate MAP
+opt FA-11-D: no se obtiene la dirección
+  W --> U : Conservar el punto y permitir escribir la referencia
+end
+W --> U : Completar referencia o colonia y alcaldía
+U -> W : Adjuntar de 1 a 4 fotografías y elegir la principal
+opt FA-11-B: una foto supera 3 MB
+  W --> U : «Cada imagen no debe superar 3MB»
+end
+loop para cada fotografía
+  ref over W, IA : CU-41 Analizar fotografía con la red neuronal
+  opt FA-11-C: la foto no es de un perro
+    W --> U : Indicar el motivo y bloquear la publicación
+  end
+end
+U -> W : Seleccionar «Usar datos detectados (raza, color y tamaño)» (opcional)\ny capturar la cartilla de salud (opcional)
+U -> W : Seleccionar «Publicar Anuncio»
+W -> W : Validar datos obligatorios, tamaño y fotos
+break FA-11-A: falta un dato obligatorio o no hay fotos
+  W --> U : Señalar el campo
+end
+alt operación exitosa
+  W -> A : Registrar publicación (POST /pets multipart:\npet + images[1..4], con token JWT)
+  activate A
+  A -> A : Verificar en el token el rol SHELTER,\nque otorga el permiso PUBLISHER
+  A -> IA : Verificar que cada foto sea de un perro (POST /describe)
+  activate IA
+  IA --> A : Resultado
+  deactivate IA
+  break FA-11-C: alguna foto no es de perro
+    A --> W : 422 con el motivo
+    W --> U : Mostrar el motivo
+  end
+  A -> A : Guardar los archivos de las fotos
+  A -> DB : Registrar perro (INSERT pets estado AVAILABLE,\npet_images y pet_vaccines)
+  activate DB
+  DB --> A : petId
+  deactivate DB
+  loop para cada fotografía
+    A -> IA : Obtener vector y raza (POST /analyze)
+    activate IA
+    IA --> A : Vector de 1,280 valores y raza
+    deactivate IA
+    A -> DB : Guardar vector (INSERT pet_image_embeddings)
+    activate DB
+    DB --> A : Guardado
+    deactivate DB
+  end
+  A --> W : 200 Publicación registrada
+  deactivate A
+  W --> U : «Anuncio publicado correctamente» y mostrar «Adopción»
+else FA-11-E: error al almacenar
+  W --> U : Informar la falla y conservar el formulario
+end
+deactivate W
+
+note over U, DB : Postcondición: la publicación queda disponible en «Adopción» y asociada al Refugio, que recibe las solicitudes (CU-15).
+@enduml

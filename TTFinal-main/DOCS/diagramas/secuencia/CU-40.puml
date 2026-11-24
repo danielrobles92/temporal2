@@ -1,0 +1,107 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-40 Administrar red neuronal
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel – Red neuronal)" as W
+participant "API REST\n(PetsController / ReportsController)" as A
+participant "Servicio de IA\n(ml-service DogNet v2)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador y el servicio de IA (ml-service) está en ejecución.
+
+alt «Re-analizar fotos existentes»
+  U -> W : Seleccionar «Re-analizar fotos existentes» en la sección «Red neuronal»
+  activate W
+  W -> A : Re-analizar fotos de perros (POST /pets/embeddings/backfill?force=true)
+  activate A
+  A -> A : Verificar rol de Administrador
+  loop para cada perro y cada una de sus fotos
+    A -> IA : Obtener vector y raza (POST /analyze)
+    activate IA
+    IA --> A : Vector y raza
+    deactivate IA
+    A -> DB : Actualizar vector (UPDATE pet_image_embeddings)
+    activate DB
+    DB --> A : Guardado
+    deactivate DB
+    opt el perro no tiene tamaño
+      A -> IA : Describir la foto principal (POST /describe)
+      activate IA
+      IA --> A : Tamaño
+      deactivate IA
+      A -> DB : Guardar tamaño (UPDATE pets SET size)
+      activate DB
+      DB --> A : Guardado
+      deactivate DB
+    end
+  end
+  A --> W : 200 {processed}
+  deactivate A
+  W -> A : Re-analizar fotos de reportes (POST /reports/embeddings/backfill?force=true)
+  activate A
+  loop para cada reporte y cada una de sus fotos
+    A -> IA : Obtener vector y raza (POST /analyze)
+    activate IA
+    IA --> A : Vector y raza
+    deactivate IA
+    A -> DB : Reemplazar vectores (report_image_embeddings)
+    activate DB
+    DB --> A : Guardado
+    deactivate DB
+  end
+  A --> W : 200 {processed}
+  deactivate A
+  alt FA-40-B: el servicio de IA no está disponible (0 fotos procesadas)
+    W --> U : «No se analizó ninguna foto. Verifica que el servicio de IA\n(ml-service) esté encendido.»; se conservan los análisis anteriores
+  else fotos procesadas
+    W --> U : «Fotos re-analizadas correctamente» con la cantidad\nde fotos de perros y de reportes
+  end
+else FA-40-A: «Probar con tus fotos»
+  U -> W : Subir fotos en «Probar con tus fotos»
+  loop para cada foto
+    W -> A : Analizar foto (POST /images/analyze)
+    activate A
+    A -> IA : Describir imagen (POST /describe)
+    activate IA
+    IA --> A : Descripción
+    deactivate IA
+    A --> W : 200 Descripción
+    deactivate A
+  end
+  W --> U : Si es perro, raza u «Otro», tamaño, etapa de vida y color,\nsin guardar nada
+end
+deactivate W
+
+note over U, DB : Postcondición: los análisis de las fotografías quedan actualizados con el modelo vigente y los perros sin tamaño reciben el detectado.
+@enduml

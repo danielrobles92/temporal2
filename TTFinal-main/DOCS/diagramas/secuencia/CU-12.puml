@@ -1,0 +1,75 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-12 Gestionar perros en adopción
+autonumber
+
+actor "Responsable de la publicación\n(Refugio o Usuario general autorizado)" as U
+participant "Interfaz web\n(Mis Anuncios)" as W
+participant "API REST\n(PetsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Refugio o como Usuario general con autorización vigente.
+
+U -> W : Acceder a «Mis Anuncios» y seleccionar\nla pestaña «Publicaciones de adopción»
+activate W
+alt operación exitosa
+  W -> A : Consultar sus publicaciones (GET /pets/owner/{ownerId})
+  activate A
+  A -> DB : Consultar perros del responsable (pets, pet_images)
+  activate DB
+  DB --> A : Publicaciones
+  deactivate DB
+  A --> W : 200 Lista
+  deactivate A
+  break FA-12-A: no tiene publicaciones
+    W --> U : «No tienes publicaciones de adopción.» y la opción «Publicar»
+    ref over U, W : CU-10 Publicar perro en adopción autorizado / CU-11 Publicar perro en adopción
+  end
+  W --> U : Cada publicación con fotografía, nombre, estado\n(Disponible, Adoptado o Inactivo), raza y ubicación
+  opt FA-12-C: no tiene autorización para publicar
+    W --> U : Mostrar «Solicitar autorización para publicar» en lugar de «Publicar»
+    ref over U, W : CU-09 Solicitar autorización para publicar perro en adopción
+  end
+  U -> W : Seleccionar una publicación
+  W --> U : Detalle: fotografías, raza, sexo, edad, tamaño, color,\nubicación, estado y descripción
+  alt «Editar»
+    ref over U, DB : CU-13 Editar publicación
+  else «Desactivar» o «Eliminar»
+    ref over U, DB : CU-14 Eliminar o desactivar publicación
+  end
+else FA-12-B: error al consultar
+  W --> U : «No se pudieron cargar tus anuncios»
+end
+deactivate W
+
+note over U, DB : Postcondición: el actor consulta sus publicaciones y puede administrarlas.
+@enduml

@@ -1,0 +1,63 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-35 Consultar recomendaciones por raza
+autonumber
+
+actor "Adoptante o responsable\nde la publicación" as U
+participant "Interfaz web\n(Adopción o Solicitudes)" as W
+participant "Catálogo de razas\n(breedProfiles, en la interfaz)" as CAT
+
+note over U, CAT : Precondición: quien quiere adoptar seleccionó «Solicitar adopción» (CU-05) o el responsable seleccionó «Contactar» en una solicitud pendiente (CU-16); ambos casos de uso incluyen a este.
+
+W -> W : Identificar la raza registrada en la publicación
+activate W
+W -> CAT : Buscar el perfil de la raza (getBreedProfile(raza))
+activate CAT
+alt FA-35-A: la raza es «Otro», no está registrada o no pertenece a las 20 del catálogo
+  CAT --> W : Resumen general (GENERAL_PROFILE.resumen)
+  W --> U : Esperanza de vida de los perros mestizos, cuidados\npara cualquier perro y fuentes numeradas
+else raza del catálogo
+  CAT --> W : Resumen de la raza (resumen.puntos y resumen.cuidados), tamaño\nsegún el estándar oficial (FCI) y esperanza de vida (McMillan), con sus fuentes
+  W --> U : «Lo que dicen los estudios sobre la raza»: tamaño, esperanza de vida,\ndatos de la raza, cuidados que necesitará y referencias numeradas
+  note right of W : FA-35-B: si la raza no tiene dato de\nesperanza de vida, se indica.
+end
+deactivate CAT
+alt desde CU-05 (paso «Datos a considerar»)
+  U -> U : Leer la información antes de contestar las preguntas
+else desde CU-16 («Antes de contactar al solicitante»)
+  W --> U : Respuestas del solicitante junto al resumen de la raza
+  U -> U : Comparar las respuestas con la información de la raza
+end
+deactivate W
+
+note over U, CAT : Postcondición: quien quiere adoptar y el responsable de la publicación cuentan con la misma información de referencia sobre la raza.
+@enduml

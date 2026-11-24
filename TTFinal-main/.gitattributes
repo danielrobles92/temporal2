@@ -1,0 +1,7 @@
+# Archivos que se usan en el servidor Linux (deploy/nube): siempre con saltos de linea LF.
+*.sh text eol=lf
+Dockerfile text eol=lf
+.dockerignore text eol=lf
+deploy/nube/** text eol=lf
+# los .bat se quedan con CRLF (cmd de Windows)
+*.bat text eol=crlf

@@ -1,0 +1,99 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-41 Analizar fotografía con la red neuronal
+autonumber
+
+actor "Usuario que publica" as U
+participant "Interfaz web\n(formulario con fotos)" as W
+participant "API REST\n(ImageAnalysisController / DogImageGuard)" as A
+participant "Servicio de IA\n(ml-service: DogNet v2 + etapa de vida)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: un caso de uso que incluye este análisis envía una o más fotografías: CU-07, CU-08, CU-10, CU-11, CU-13, CU-33 o CU-40.
+
+U -> W : Seleccionar una fotografía
+activate W
+alt operación exitosa
+  W -> A : Analizar fotografía (POST /images/analyze, multipart image)
+  activate A
+  A -> IA : Describir imagen (POST /describe)
+  activate IA
+  IA -> IA : Revisar la foto completa: el recorte central y secciones\ncuadradas a lo largo del lado largo (al menos 50 % de traslape)
+  IA -> IA : DogNet v2: determinar si el centro contiene un perro; si no,\naceptar una sección solo si la red está segura o si el detector\nde perros ve uno dentro de esa sección
+  IA -> IA : Identificar la raza (una de 20 u «Otro»)\ny el tamaño (pequeño, mediano o grande)
+  IA -> IA : Clasificar la etapa de vida (cachorro o adulto) y estimar\nlos colores del pelaje (todos los que cubren 20 % o más)
+  IA --> A : Descripción (perro, raza, tamaño, etapa, colores,\nconfianzas y vista usada)
+  deactivate IA
+  A --> W : 200 Descripción
+  deactivate A
+  alt FA-41-A: la imagen no contiene un perro
+    W --> U : «La imagen no se identifica como un perro. No se puede\nprocesar.» (sin decir qué es) e impedir publicar con esa foto
+  else es un perro
+    W --> U : Atributos sugeridos (con todos los colores)\ny la opción «Usar datos detectados»
+    opt el usuario selecciona «Usar datos detectados»
+      U -> W : Seleccionar «Usar datos detectados»
+      W -> W : Llenar raza, color y, en adopción, tamaño;\nel usuario puede corregirlos
+    end
+  end
+else FA-41-B: el servicio de IA no está disponible
+  A --> W : 503 «El reconocimiento de imágenes no está disponible en este momento»
+  W --> U : Permitir continuar sin el análisis
+end
+== Al guardar la publicación o el reporte ==
+W -> A : Guardar el registro con la fotografía\n(CU-07, CU-08, CU-10, CU-11, CU-13 o CU-33)
+activate A
+A -> IA : Verificar de nuevo que sea perro (POST /describe)
+activate IA
+IA --> A : Resultado
+deactivate IA
+break FA-41-A: la imagen no contiene un perro
+  A --> W : 422 {error: NOT_A_DOG, message}
+end
+A -> IA : Obtener el vector (POST /analyze)
+activate IA
+alt FA-41-C: no se puede generar el vector
+  IA --> A : Error
+  A -> A : Guardar el registro de todos modos;\nla foto queda pendiente de analizar (CU-40)
+else vector generado
+  IA --> A : Vector de 1,280 valores (del recorte central), raza,\ntamaño, etapa y colores
+  deactivate IA
+  A -> DB : Guardar el vector y lo que detectó la red (raza, tamaño, etapa\ny colores) (INSERT pet_image_embeddings o report_image_embeddings)
+  activate DB
+  DB --> A : Guardado
+  deactivate DB
+end
+A --> W : 200 Registro guardado
+deactivate A
+deactivate W
+
+note over U, DB : Postcondición: la fotografía queda validada como imagen de perro, con sus atributos sugeridos y su vector almacenado.
+@enduml

@@ -1,0 +1,453 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2317" height="2016" viewBox="0 0 2317 2016">
+<rect width="2317" height="2016" fill="#FFFFFF"/>
+<text x="40.0" y="40.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" font-style="normal" fill="#0D2B4E" text-anchor="start">Diagrama de clases de la Plataforma Perreque</text>
+<line x1="40" y1="1590" x2="2277" y2="1590" stroke="#1565C0" stroke-width="1" stroke-dasharray="6,4"/>
+<text x="40.0" y="1614.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#0D2B4E" text-anchor="start">Enumeraciones (tipos de los atributos)</text>
+<polyline points="958.0,404.0 521.0,404.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="950.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="529.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="739.5" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ publica</text>
+<polyline points="1232.0,404.0 1691.0,404.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1240.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="1683.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..*</text>
+<text x="1461.5" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">registra ▸</text>
+<polyline points="958.0,648.0 739.0,648.0 739.0,762.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="950.0" y="642.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="745.0" y="750.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="848.5" y="642.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ envía</text>
+<polyline points="1232.0,648.0 1462.5,648.0 1462.5,762.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1240.0" y="642.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1468.5" y="750.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1347.2" y="642.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">envía ▸</text>
+<polyline points="521.0,786.0 641.0,786.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="529.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="633.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..*</text>
+<text x="581.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">recibe ▸</text>
+<polyline points="1691.0,786.0 1562.0,786.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="1691.0,786.0 1682.0,780.0 1673.0,786.0 1682.0,792.0" fill="#1565C0"/>
+<text x="1667.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="1570.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1626.5" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ recibe</text>
+<polyline points="1095.0,358.0 1095.0,262.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1101.0" y="346.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="1101.0" y="278.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1103.0" y="314.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="start">recibe ▴</text>
+<polyline points="998.0,358.0 998.0,328.0 739.0,328.0 739.0,278.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1004.0" y="346.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="745.0" y="294.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="868.5" y="322.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ solicita</text>
+<polyline points="1192.0,358.0 1192.0,328.0 1462.5,328.0 1462.5,230.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1198.0" y="346.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="1468.5" y="246.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1327.2" y="322.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">solicita ▸</text>
+<polyline points="973.0,694.0 973.0,952.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="967.0" y="710.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="967.0" y="940.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..*</text>
+<text x="967.0" y="726.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="end">responsable</text>
+<polyline points="1217.0,694.0 1217.0,952.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1223.0" y="710.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1223.0" y="940.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1223.0" y="726.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="start">participante</text>
+<polyline points="1095.0,694.0 1095.0,764.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1101.0" y="710.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1101.0" y="752.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1101.0" y="726.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="start">remitente</text>
+<polyline points="1095.5,952.0 1095.5,882.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="1095.5,952.0 1089.5,943.0 1095.5,934.0 1101.5,943.0" fill="#1565C0"/>
+<text x="1105.5" y="940.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="1101.5" y="898.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1..*</text>
+<polyline points="837.0,1001.0 957.0,1001.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="845.0" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="949.0" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..1</text>
+<text x="897.0" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">origina ▸</text>
+<polyline points="1363.0,1001.0 1234.0,1001.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1355.0" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..1</text>
+<text x="1242.0" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1298.5" y="995.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ origina</text>
+<polyline points="987.0,1176.0 987.0,1221.0 477.0,1221.0 477.0,822.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="993.0" y="1192.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="483.0" y="838.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="732.0" y="1215.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ trata sobre</text>
+<polyline points="1204.0,1176.0 1204.0,1221.0 1787.5,1221.0 1787.5,806.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1210.0" y="1192.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1793.5" y="822.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1495.8" y="1215.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">trata sobre ▸</text>
+<polyline points="333.0,398.0 205.0,398.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="333.0,398.0 324.0,392.0 315.0,398.0 324.0,404.0" fill="#1565C0"/>
+<text x="309.0" y="392.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="213.0" y="392.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1..4</text>
+<polyline points="126.5,476.0 126.5,526.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="126.5,476.0 120.5,485.0 126.5,494.0 132.5,485.0" fill="#1565C0"/>
+<text x="136.5" y="492.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="132.5" y="514.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<polyline points="333.0,793.0 213.0,793.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="333.0,793.0 324.0,787.0 315.0,793.0 324.0,799.0" fill="#1565C0"/>
+<text x="309.0" y="787.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">1</text>
+<text x="221.0" y="787.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<polyline points="1984.0,404.0 2104.0,404.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<polygon points="1984.0,404.0 1993.0,398.0 2002.0,404.0 1993.0,410.0" fill="#1565C0"/>
+<text x="2008.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="2096.0" y="398.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..4</text>
+<polyline points="427.0,822.0 427.0,1356.0 997.0,1356.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="433.0" y="838.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="989.0" y="1350.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="end">0..*</text>
+<text x="712.0" y="1350.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ candidata</text>
+<polyline points="1837.5,806.0 1837.5,1356.0 1193.0,1356.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1843.5" y="822.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">1</text>
+<text x="1201.0" y="1350.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1515.2" y="1350.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ genera</text>
+<polyline points="1887.5,806.0 1887.5,1406.0 1193.0,1406.0" fill="none" stroke="#1565C0" stroke-width="1.3"/>
+<text x="1893.5" y="822.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..1</text>
+<text x="1201.0" y="1400.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#0D2B4E" text-anchor="start">0..*</text>
+<text x="1540.2" y="1400.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" font-style="italic" fill="#0D2B4E" text-anchor="middle">◂ candidato</text>
+<line x1="937" y1="1417.0" x2="997" y2="1417.0" stroke="#1565C0" stroke-width="1.2" stroke-dasharray="5,4"/>
+<polygon points="671,1386 927,1386 937,1396 937,1448 671,1448" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<polyline points="927,1386 927,1396 937,1396" fill="none" stroke="#1565C0" stroke-width="1.2"/>
+<text x="681" y="1405" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">{xor}</text>
+<text x="681" y="1421" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">Cada coincidencia apunta a una mascota</text>
+<text x="681" y="1437" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">del catálogo o a otro reporte, nunca a ambos.</text>
+<rect x="958" y="358" width="274" height="336" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="958" y="358" width="274" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1095.0" y="377" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Usuario</text>
+<text x="968" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="968" y="419" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombreUsuario : String</text>
+<text x="968" y="435" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- correo : String</text>
+<text x="968" y="451" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- telefono : String</text>
+<text x="968" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- contrasena : String</text>
+<text x="968" y="483" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- rol : RolUsuario</text>
+<text x="968" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- permisoPublicar : boolean</text>
+<text x="968" y="515" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- cuentaActiva : boolean</text>
+<text x="968" y="531" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<line x1="958" y1="540" x2="1232" y2="540" stroke="#1565C0" stroke-width="1"/>
+<text x="968" y="557" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ registrarse()</text>
+<text x="968" y="573" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ iniciarSesion(recordarme : boolean)</text>
+<text x="968" y="589" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ recuperarContrasena(correo : String)</text>
+<text x="968" y="605" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ actualizarPerfil()</text>
+<text x="968" y="621" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cambiarContrasena()</text>
+<text x="968" y="637" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cambiarRol(rol : RolUsuario)</text>
+<text x="968" y="653" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cambiarPermisoPublicar(permiso : boolean)</text>
+<text x="968" y="669" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cambiarEstadoCuenta(activa : boolean)</text>
+<text x="968" y="685" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<rect x="333" y="358" width="188" height="464" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="333" y="358" width="188" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="427.0" y="377" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Mascota</text>
+<text x="343" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="343" y="419" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombre : String</text>
+<text x="343" y="435" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- especie : Especie</text>
+<text x="343" y="451" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- raza : String</text>
+<text x="343" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- sexo : Sexo</text>
+<text x="343" y="483" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- color : String</text>
+<text x="343" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tamano : Tamano</text>
+<text x="343" y="515" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- edad : int</text>
+<text x="343" y="531" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- descripcion : String</text>
+<text x="343" y="547" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- ubicacion : String</text>
+<text x="343" y="563" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- latitud : double</text>
+<text x="343" y="579" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- longitud : double</text>
+<text x="343" y="595" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoMascota</text>
+<text x="343" y="611" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaNacimiento : Date</text>
+<text x="343" y="627" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- pesoKg : double</text>
+<text x="343" y="643" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- esterilizado : boolean</text>
+<text x="343" y="659" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- microchip : String</text>
+<text x="343" y="675" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- ultimaDesparasitacion : Date</text>
+<text x="343" y="691" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- veterinario : String</text>
+<text x="343" y="707" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- notasMedicas : String</text>
+<text x="343" y="723" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<line x1="333" y1="732" x2="521" y2="732" stroke="#1565C0" stroke-width="1"/>
+<text x="343" y="749" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ publicar()</text>
+<text x="343" y="765" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ editar()</text>
+<text x="343" y="781" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ desactivar()</text>
+<text x="343" y="797" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<text x="343" y="813" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ buscarCoincidencias()</text>
+<rect x="48" y="358" width="157" height="118" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="48" y="358" width="157" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="126.5" y="377" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">ImagenMascota</text>
+<text x="58" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="58" y="419" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- url : String</text>
+<text x="58" y="435" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- esPrincipal : boolean</text>
+<text x="58" y="451" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- posicion : int</text>
+<text x="58" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCarga : DateTime</text>
+<rect x="40" y="526" width="173" height="198" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="40" y="526" width="173" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="126.5" y="545" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">VectorImagenMascota</text>
+<text x="50" y="571" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="50" y="587" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- modelo : String</text>
+<text x="50" y="603" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- dimension : int = 1280</text>
+<text x="50" y="619" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- vector : float[1280]</text>
+<text x="50" y="635" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- razaDetectada : String</text>
+<text x="50" y="651" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- confianzaRaza : float</text>
+<text x="50" y="667" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- colores : String</text>
+<text x="50" y="683" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tamano : String</text>
+<text x="50" y="699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- etapa : String</text>
+<text x="50" y="715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<rect x="40" y="764" width="173" height="150" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="40" y="764" width="173" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="126.5" y="783" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Vacuna</text>
+<text x="50" y="809" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="50" y="825" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombre : String</text>
+<text x="50" y="841" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaAplicacion : Date</text>
+<text x="50" y="857" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- proximaDosis : Date</text>
+<text x="50" y="873" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- veterinario : String</text>
+<text x="50" y="889" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- lote : String</text>
+<text x="50" y="905" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<rect x="641" y="762" width="196" height="288" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="641" y="762" width="196" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="739.0" y="781" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">SolicitudAdopcion</text>
+<text x="651" y="807" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="651" y="823" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombreContacto : String</text>
+<text x="651" y="839" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- correoContacto : String</text>
+<text x="651" y="855" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- telefonoContacto : String</text>
+<text x="651" y="871" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- mensaje : String</text>
+<text x="651" y="887" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- respuestas : String</text>
+<text x="651" y="903" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoSolicitud</text>
+<text x="651" y="919" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- notasDecision : String</text>
+<text x="651" y="935" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<text x="651" y="951" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaActualizacion : DateTime</text>
+<line x1="641" y1="960" x2="837" y2="960" stroke="#1565C0" stroke-width="1"/>
+<text x="651" y="977" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ enviar()</text>
+<text x="651" y="993" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cancelar()</text>
+<text x="651" y="1009" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ aprobarYContactar()</text>
+<text x="651" y="1025" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ rechazar()</text>
+<text x="651" y="1041" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<rect x="641" y="70" width="196" height="208" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="641" y="70" width="196" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="739.0" y="89" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">SolicitudAutorizacion</text>
+<text x="651" y="115" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="651" y="131" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- motivo : String</text>
+<text x="651" y="147" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoAutorizacion</text>
+<text x="651" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- notasRevision : String</text>
+<text x="651" y="179" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<text x="651" y="195" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaActualizacion : DateTime</text>
+<line x1="641" y1="204" x2="837" y2="204" stroke="#1565C0" stroke-width="1"/>
+<text x="651" y="221" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ enviar()</text>
+<text x="651" y="237" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ aprobar()</text>
+<text x="651" y="253" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ rechazar()</text>
+<text x="651" y="269" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<rect x="974" y="70" width="243" height="192" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="974" y="70" width="243" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1095.5" y="89" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Notificacion</text>
+<text x="984" y="115" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="984" y="131" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tipo : TipoNotificacion</text>
+<text x="984" y="147" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- titulo : String</text>
+<text x="984" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- mensaje : String</text>
+<text x="984" y="179" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- enlace : String</text>
+<text x="984" y="195" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- leida : boolean</text>
+<text x="984" y="211" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<line x1="974" y1="220" x2="1217" y2="220" stroke="#1565C0" stroke-width="1"/>
+<text x="984" y="237" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ marcarLeida()</text>
+<text x="984" y="253" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E" text-decoration="underline">+ marcarTodasLeidas(usuario : Usuario)</text>
+<rect x="1354" y="70" width="217" height="160" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1354" y="70" width="217" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1462.5" y="89" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">CodigoRecuperacion</text>
+<text x="1364" y="115" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="1364" y="131" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- codigoCifrado : String</text>
+<text x="1364" y="147" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- venceEn : DateTime</text>
+<text x="1364" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- intentos : int</text>
+<text x="1364" y="179" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- usado : boolean</text>
+<text x="1364" y="195" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<line x1="1354" y1="204" x2="1571" y2="204" stroke="#1565C0" stroke-width="1"/>
+<text x="1364" y="221" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ verificar(codigo : String) : boolean</text>
+<rect x="1691" y="358" width="293" height="448" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1691" y="358" width="293" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1837.5" y="377" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Reporte</text>
+<text x="1701" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="1701" y="419" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tipo : TipoReporte</text>
+<text x="1701" y="435" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombre : String</text>
+<text x="1701" y="451" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- especie : Especie</text>
+<text x="1701" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- raza : String</text>
+<text x="1701" y="483" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- sexo : Sexo</text>
+<text x="1701" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- color : String</text>
+<text x="1701" y="515" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- edad : int</text>
+<text x="1701" y="531" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- ubicacion : String</text>
+<text x="1701" y="547" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- latitud : double</text>
+<text x="1701" y="563" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- longitud : double</text>
+<text x="1701" y="579" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- descripcion : String</text>
+<text x="1701" y="595" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- telefonoContacto : String</text>
+<text x="1701" y="611" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fotos : String[1..4]</text>
+<text x="1701" y="627" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoReporte</text>
+<text x="1701" y="643" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- notasModeracion : String</text>
+<text x="1701" y="659" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<text x="1701" y="675" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaActualizacion : DateTime</text>
+<line x1="1691" y1="684" x2="1984" y2="684" stroke="#1565C0" stroke-width="1"/>
+<text x="1701" y="701" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ registrar()</text>
+<text x="1701" y="717" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ editar()</text>
+<text x="1701" y="733" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ desactivar()</text>
+<text x="1701" y="749" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<text x="1701" y="765" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ buscarCoincidencias()</text>
+<text x="1701" y="781" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ volverAComparar()</text>
+<text x="1701" y="797" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ moderar(estado : EstadoReporte, notas : String)</text>
+<rect x="2104" y="358" width="173" height="214" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="2104" y="358" width="173" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="2190.5" y="377" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">VectorImagenReporte</text>
+<text x="2114" y="403" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="2114" y="419" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- urlFoto : String</text>
+<text x="2114" y="435" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- modelo : String</text>
+<text x="2114" y="451" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- dimension : int = 1280</text>
+<text x="2114" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- vector : float[1280]</text>
+<text x="2114" y="483" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- razaDetectada : String</text>
+<text x="2114" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- confianzaRaza : float</text>
+<text x="2114" y="515" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- colores : String</text>
+<text x="2114" y="531" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tamano : String</text>
+<text x="2114" y="547" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- etapa : String</text>
+<text x="2114" y="563" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<rect x="1363" y="762" width="199" height="288" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1363" y="762" width="199" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1462.5" y="781" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Aviso</text>
+<text x="1373" y="807" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="1373" y="823" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombreContacto : String</text>
+<text x="1373" y="839" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- correoContacto : String</text>
+<text x="1373" y="855" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- telefonoContacto : String</text>
+<text x="1373" y="871" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- lugar : String</text>
+<text x="1373" y="887" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- mensaje : String</text>
+<text x="1373" y="903" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fotos : String[0..4]</text>
+<text x="1373" y="919" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoAviso</text>
+<text x="1373" y="935" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- respuesta : String</text>
+<text x="1373" y="951" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaRespuesta : DateTime</text>
+<text x="1373" y="967" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaAperturaCaso : DateTime</text>
+<text x="1373" y="983" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<line x1="1363" y1="992" x2="1562" y2="992" stroke="#1565C0" stroke-width="1"/>
+<text x="1373" y="1009" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ enviar()</text>
+<text x="1373" y="1025" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ responder(texto : String)</text>
+<text x="1373" y="1041" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ descartar()</text>
+<rect x="957" y="952" width="277" height="224" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="957" y="952" width="277" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1095.5" y="971" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Caso</text>
+<text x="967" y="997" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="967" y="1013" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- tipo : TipoCaso</text>
+<text x="967" y="1029" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- titulo : String</text>
+<text x="967" y="1045" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoCaso</text>
+<text x="967" y="1061" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- ultimoMensaje : String</text>
+<text x="967" y="1077" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<text x="967" y="1093" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaActualizacion : DateTime</text>
+<line x1="957" y1="1102" x2="1234" y2="1102" stroke="#1565C0" stroke-width="1"/>
+<text x="967" y="1119" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ abrir()</text>
+<text x="967" y="1135" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ enviarMensaje(texto : String, fotos : File[0..4])</text>
+<text x="967" y="1151" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ cerrar(estado : EstadoCaso)</text>
+<text x="967" y="1167" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ eliminar()</text>
+<rect x="1009" y="764" width="173" height="118" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1009" y="764" width="173" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1095.5" y="783" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">MensajeCaso</text>
+<text x="1019" y="809" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="1019" y="825" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- nombreRemitente : String</text>
+<text x="1019" y="841" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- mensaje : String</text>
+<text x="1019" y="857" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fotos : String[0..4]</text>
+<text x="1019" y="873" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<rect x="997" y="1306" width="196" height="224" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="997" y="1306" width="196" height="28" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1095.0" y="1325" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Coincidencia</text>
+<text x="1007" y="1351" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- id : int</text>
+<text x="1007" y="1367" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- puntaje : float</text>
+<text x="1007" y="1383" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- puntajeVisual : float</text>
+<text x="1007" y="1399" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- puntajeAtributos : int</text>
+<text x="1007" y="1415" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- probabilidad : float</text>
+<text x="1007" y="1431" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- motivo : String</text>
+<text x="1007" y="1447" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- estado : EstadoCoincidencia</text>
+<text x="1007" y="1463" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaCreacion : DateTime</text>
+<text x="1007" y="1479" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">- fechaActualizacion : DateTime</text>
+<line x1="997" y1="1488" x2="1193" y2="1488" stroke="#1565C0" stroke-width="1"/>
+<text x="1007" y="1505" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ validar()</text>
+<text x="1007" y="1521" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">+ rechazar()</text>
+<rect x="680" y="1640" width="96" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="680" y="1640" width="96" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="728.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="728.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">RolUsuario</text>
+<text x="690" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">USER</text>
+<text x="690" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">SHELTER</text>
+<text x="690" y="1731" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADMIN</text>
+<rect x="816" y="1640" width="118" height="116" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="816" y="1640" width="118" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="875.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="875.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoMascota</text>
+<text x="826" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">AVAILABLE</text>
+<text x="826" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADOPTED</text>
+<text x="826" y="1731" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">LOST</text>
+<text x="826" y="1747" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">INACTIVE</text>
+<rect x="974" y="1640" width="96" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="974" y="1640" width="96" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1022.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1022.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Especie</text>
+<text x="984" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">DOG</text>
+<text x="984" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">CAT</text>
+<text x="984" y="1731" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">OTHER</text>
+<rect x="1110" y="1640" width="96" height="84" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1110" y="1640" width="96" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1158.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1158.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Sexo</text>
+<text x="1120" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">MALE</text>
+<text x="1120" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">FEMALE</text>
+<rect x="1246" y="1640" width="96" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1246" y="1640" width="96" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1294.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1294.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">Tamano</text>
+<text x="1256" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">pequeno</text>
+<text x="1256" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">mediano</text>
+<text x="1256" y="1731" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">grande</text>
+<rect x="1382" y="1640" width="100" height="84" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1382" y="1640" width="100" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1432.0" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1432.0" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">TipoReporte</text>
+<text x="1392" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">LOST</text>
+<text x="1392" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">FOUND</text>
+<rect x="1522" y="1640" width="115" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1522" y="1640" width="115" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1579.5" y="1655" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1579.5" y="1672" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoReporte</text>
+<text x="1532" y="1699" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">OPEN</text>
+<text x="1532" y="1715" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">RESOLVED</text>
+<text x="1532" y="1731" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">INACTIVE</text>
+<rect x="582" y="1786" width="123" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="582" y="1786" width="123" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="643.5" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="643.5" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoSolicitud</text>
+<text x="592" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">PENDING</text>
+<text x="592" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">APPROVED</text>
+<text x="592" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">REJECTED</text>
+<rect x="745" y="1786" width="146" height="100" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="745" y="1786" width="146" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="818.0" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="818.0" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoAutorizacion</text>
+<text x="755" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">PENDING</text>
+<text x="755" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">APPROVED</text>
+<text x="755" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">REJECTED</text>
+<rect x="931" y="1786" width="148" height="116" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="931" y="1786" width="148" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1005.0" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1005.0" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoCoincidencia</text>
+<text x="941" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">SUGGESTED</text>
+<text x="941" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">VALIDATED</text>
+<text x="941" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">REJECTED</text>
+<text x="941" y="1893" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">DISCARDED</text>
+<rect x="1119" y="1786" width="115" height="116" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1119" y="1786" width="115" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1176.5" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1176.5" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoAviso</text>
+<text x="1129" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">NEW</text>
+<text x="1129" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">REPLIED</text>
+<text x="1129" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">CASE_OPENED</text>
+<text x="1129" y="1893" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">DISMISSED</text>
+<rect x="1274" y="1786" width="96" height="84" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1274" y="1786" width="96" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1322.0" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1322.0" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">TipoCaso</text>
+<text x="1284" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADOPTION</text>
+<text x="1284" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">LOST</text>
+<rect x="1410" y="1786" width="98" height="116" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1410" y="1786" width="98" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1459.0" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1459.0" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">EstadoCaso</text>
+<text x="1420" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">OPEN</text>
+<text x="1420" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADOPTED</text>
+<text x="1420" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">CANCELLED</text>
+<text x="1420" y="1893" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">RESOLVED</text>
+<rect x="1548" y="1786" width="186" height="180" fill="#F7FAFE" stroke="#1565C0" stroke-width="1.2"/>
+<rect x="1548" y="1786" width="186" height="42" fill="#D6E6FA" stroke="#1565C0" stroke-width="1.2"/>
+<text x="1641.0" y="1801" font-family="Arial, Helvetica, sans-serif" font-size="11" font-style="italic" fill="#0D2B4E" text-anchor="middle">«enumeration»</text>
+<text x="1641.0" y="1818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#0D2B4E" text-anchor="middle">TipoNotificacion</text>
+<text x="1558" y="1845" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADOPTION_REQUEST</text>
+<text x="1558" y="1861" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">ADOPTION_DECISION</text>
+<text x="1558" y="1877" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">AUTHORIZATION_DECISION</text>
+<text x="1558" y="1893" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">CASE_MESSAGE</text>
+<text x="1558" y="1909" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">CASE_STATUS</text>
+<text x="1558" y="1925" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">SIGHTING</text>
+<text x="1558" y="1941" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">SIGHTING_REPLY</text>
+<text x="1558" y="1957" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0D2B4E">MATCH_FOUND</text>
+</svg>

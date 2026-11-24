@@ -1,0 +1,86 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-01 Registrarse en la plataforma
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Registro)" as W
+participant "API REST\n(UserController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario no ha iniciado sesión y no existe una cuenta con el mismo correo electrónico (RN-03).
+
+U -> W : Seleccionar «Regístrate aquí» en la pantalla de inicio de sesión
+activate W
+W --> U : Formulario «Crear Cuenta»
+deactivate W
+
+U -> W : Capturar nombre de usuario, correo, teléfono, contraseña y confirmación;\naceptar términos y seleccionar «Crear Cuenta»
+activate W
+break FA-01-B: no aceptó los términos y condiciones
+  W --> U : Solicitar aceptar los términos y no enviar el formulario
+end
+
+W -> W : Validar campos (usuario ≥ 3 caracteres, correo válido, teléfono válido,\ncontraseña ≥ 6 con mayúsculas, minúsculas y números, confirmación igual)
+break FA-01-A: dato faltante o con formato inválido
+  W --> U : Señalar cada campo con su error y conservar los demás datos
+end
+
+alt operación exitosa
+  W -> A : Registrar cuenta (POST /users {username, email, phone, password})
+  activate A
+  A -> A : Forzar el rol USER (el registro público nunca asigna otro rol)
+  A -> DB : Buscar usuario por correo (users)
+  activate DB
+  alt FA-01-C: el correo ya está registrado
+    DB --> A : Usuario existente
+    A --> W : 409 «Este correo ya fue registrado»
+    W --> U : Mostrar el error y el enlace «Inicia sesión aquí»
+  else correo disponible
+    DB --> A : Sin coincidencias
+    deactivate DB
+    A -> A : Cifrar la contraseña (BCrypt)
+    A -> DB : Registrar usuario (INSERT users: rol USER, cuenta activa, sin permiso para publicar)
+    activate DB
+    DB --> A : Usuario creado
+    deactivate DB
+    A --> W : 200 Datos de la cuenta
+    deactivate A
+    W --> U : «Registro completado correctamente. Ya puedes iniciar sesión.»\ny mostrar la pantalla de inicio de sesión
+  end
+else FA-01-D: no hay conexión o falla el servidor
+  W --> U : Informar que no se pudo completar el registro y conservar los datos
+end
+deactivate W
+
+note over U, DB : Postcondición: la cuenta queda registrada como Usuario general (activa, sin permiso para publicar) y disponible para iniciar sesión (CU-02).
+@enduml

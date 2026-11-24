@@ -1,0 +1,115 @@
+/* «Coincidencias potenciales» (detalle del reporte y editar reporte en Mis anuncios). */
+.matches-section {
+  margin-top: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.matches-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.matches-section-head h2 {
+  margin: 0;
+}
+
+.matches-section-note {
+  margin: 4px 0 14px;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.matches-section .empty-text {
+  color: var(--text-soft);
+}
+
+.match-grid {
+  display: grid;
+  /* Cada tarjeta lleva la tabla «En el análisis se identificó»: necesita al menos 300 px. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 12px;
+}
+
+.match-card {
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.match-thumb-link {
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.match-thumb-link:hover .match-thumb,
+.match-thumb-link:focus-visible .match-thumb {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.match-thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+.match-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.match-name {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.match-name:hover,
+.match-name:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.match-breed {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.match-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.match-actions .btn {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.match-actions .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

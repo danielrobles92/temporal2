@@ -1,0 +1,88 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-20 Administrar usuarios
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(UserController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador.
+
+opt FA-20-E: registrar una cuenta nueva
+  ref over U, DB : CU-36 Crear usuario
+end
+U -> W : Acceder a la sección «Usuarios» del panel
+activate W
+W -> A : Consultar cuentas (GET /users)
+activate A
+A -> A : Verificar rol de Administrador
+A -> DB : Consultar usuarios (users)
+activate DB
+DB --> A : Usuarios
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W --> U : Cuentas con nombre, correo y rol, y totales de usuarios\nnormales, refugios y administradores
+U -> W : Buscar por nombre o correo, o seleccionar un total para filtrar por rol
+break FA-20-C: ninguna cuenta coincide
+  W --> U : Listado vacío
+end
+W --> U : Cuentas filtradas
+U -> W : Seleccionar una cuenta
+W -> W : Armar el historial con los datos ya cargados del panel\n(solicitudes para publicar, solicitudes de adopción y reportes)
+W --> U : Detalle: rol, teléfono, permiso para publicar,\nestado de la cuenta e historial
+alt cambiar el rol
+  U -> W : Cambiar el rol (Usuario normal, Refugio o Administrador)
+  alt operación exitosa
+    W -> A : Cambiar rol (PATCH /users/{id}/role {role})
+    activate A
+    A -> DB : Actualizar rol y, si es Refugio o Administrador,\notorgar permiso para publicar (UPDATE users)
+    activate DB
+    DB --> A : Cuenta actualizada
+    deactivate DB
+    A --> W : 200 Cuenta
+    deactivate A
+    W --> U : «Rol actualizado correctamente»
+  else FA-20-D: error al actualizar
+    W --> U : «No se pudo actualizar el rol»; conservar el rol anterior
+  end
+else FA-20-A: «Autorizar publicar» o «Quitar permiso»
+  ref over U, DB : CU-22 Autorizar publicación a Usuario general
+else FA-20-B: «Desactivar», «Activar» o «Borrar usuario»
+  ref over U, DB : CU-37 Activar, desactivar o eliminar cuenta
+end
+deactivate W
+
+note over U, DB : Postcondición: la cuenta queda con el rol y los permisos asignados; los cambios se aplican en el siguiente inicio de sesión del usuario.
+@enduml

@@ -1,0 +1,81 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-29 Consultar reportes de perros perdidos y encontrados
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Mascotas Perdidas)" as W
+participant "API REST\n(ReportsController / PetsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión.
+
+U -> W : Acceder a «Mascotas Perdidas»
+activate W
+W -> A : Consultar perros marcados como perdidos\n(GET /pets?status=LOST&size=9999)
+activate A
+A -> DB : Consultar perros perdidos (pets)
+activate DB
+DB --> A : Perros
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W -> A : Consultar reportes (GET /reports)
+activate A
+A -> DB : Consultar reportes con su autor (lost_pets, users)
+activate DB
+DB --> A : Reportes
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W -> W : Excluir los reportes desactivados por su autor (INACTIVE)
+W --> U : Tarjetas con fotografía, nombre, tipo (perdido o encontrado) y ubicación
+alt aplicar filtros
+  U -> W : Aplicar filtros: búsqueda por nombre o raza, raza, sexo, color, alcaldía,\ntipo, estado (abierto o resuelto) y, con sesión, «Solo las mías»
+  opt FA-29-A: ningún reporte cumple
+    W --> U : «No se encontraron mascotas con esos filtros»
+  end
+  W --> U : Reportes que cumplen los filtros
+else FA-29-B: «Limpiar»
+  U -> W : Seleccionar «Limpiar»
+  W -> W : Restablecer los filtros
+  W --> U : Todos los reportes
+end
+U -> W : Seleccionar un reporte
+W --> U : Detalle: fotografías, datos del perro, ubicación y quién lo publicó
+opt FA-29-C: enviar un aviso al autor
+  ref over U, DB : CU-30 Enviar aviso de avistamiento
+end
+deactivate W
+
+note over U, DB : Postcondición: el usuario consulta los reportes sin modificarlos.
+@enduml

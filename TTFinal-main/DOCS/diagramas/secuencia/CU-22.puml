@@ -1,0 +1,103 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-22 Autorizar publicación a Usuario general
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(AuthorizationController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador y existe una solicitud de autorización (CU-09) o una cuenta de Usuario general.
+
+opt FA-22-B: desde «Usuarios», «Autorizar publicar» o «Quitar permiso»
+  U -> W : Seleccionar «Autorizar publicar» o «Quitar permiso» en una cuenta
+  activate W
+  W -> A : Cambiar permiso (PATCH /users/{id}/publishing-authorization {authorized})
+  activate A
+  A -> DB : Actualizar el permiso (UPDATE users)
+  activate DB
+  DB --> A : Cuenta actualizada
+  deactivate DB
+  A --> W : 200 Cuenta
+  deactivate A
+  W --> U : «Permiso para publicar otorgado» o «Permiso para publicar retirado»
+  deactivate W
+end
+U -> W : Acceder a «Autorizaciones para publicar»\n(cargadas con el panel: GET /publication-authorizations)
+activate W
+W --> U : Solicitudes con usuario, motivo, fecha y estado
+break FA-22-C: no hay solicitudes
+  W --> U : «No hay solicitudes de autorización.»
+end
+U -> W : Seleccionar una solicitud pendiente
+W --> U : Usuario, correo, estado, fecha y motivo
+alt «Aprobar»
+  U -> W : Seleccionar «Aprobar»
+  alt operación exitosa
+    W -> A : Decidir autorización (PATCH /publication-authorizations/{id}/decision\n{status: APPROVED})
+    activate A
+    A -> A : Verificar rol de Administrador
+    A -> DB : Cambiar la solicitud a APPROVED\n(UPDATE publication_authorization_requests)
+    activate DB
+    DB --> A : Solicitud actualizada
+    deactivate DB
+    A -> DB : Habilitar el permiso para publicar\n(UPDATE users SET publishing_authorized = true)
+    activate DB
+    DB --> A : Cuenta actualizada
+    deactivate DB
+    A ->> DB : Notificar al usuario «Tu permiso para publicar fue aprobado»\n(INSERT notifications)
+    A --> W : 200 Solicitud
+    deactivate A
+    W --> U : «Autorización aprobada» y recargar el panel
+  else FA-22-E: error al actualizar
+    W --> U : «No se pudo actualizar la autorización»; conservar el estado
+  end
+else FA-22-A: «Rechazar»
+  U -> W : Seleccionar «Rechazar»
+  W -> A : Decidir autorización (PATCH .../decision {status: REJECTED})
+  activate A
+  A -> DB : Cambiar la solicitud a REJECTED y dejar\npublishing_authorized = false (UPDATE)
+  activate DB
+  DB --> A : Registros actualizados
+  deactivate DB
+  A ->> DB : Notificar «Tu solicitud de permiso fue rechazada»\n(INSERT notifications)
+  A --> W : 200 Solicitud
+  deactivate A
+  W --> U : «Autorización rechazada»
+else FA-22-D: «Borrar solicitud»
+  ref over U, DB : CU-24 Eliminar o desactivar contenido inapropiado (DELETE /publication-authorizations/{id})
+end
+deactivate W
+
+note over U, DB : Postcondición: el usuario queda habilitado o no para publicar en adopción; el cambio se aplica en su siguiente inicio de sesión.
+@enduml

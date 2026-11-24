@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1244" height="1714" viewBox="0 0 1244 1714">
+<defs><marker id="fill" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,5 L0,10 L3,5 z" fill="#181818"/></marker><marker id="open" markerWidth="13" markerHeight="12" refX="12" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12" fill="none" stroke="#181818" stroke-width="1.4"/></marker></defs>
+<rect width="1244" height="1714" fill="#FFFFFF"/>
+<rect x="340" y="30" width="864.5853658536587" height="1644.5" rx="5" fill="#EDE9C9" stroke="#0A5A97" stroke-width="1.3"/>
+<text x="772.2926829268293" y="58" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#0A5A97" text-anchor="middle">Plataforma Perreque</text>
+<line x1="117.0" y1="842.2" x2="380.0" y2="136.5" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="221.5" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="306.5" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="527.2" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="872.5" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="1082.0" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="1167.0" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="1337.0" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="1507.0" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="117.0" y1="842.2" x2="380.0" y2="1592.0" stroke="#181818" stroke-width="1.3" marker-end="url(#fill)"/>
+<line x1="632.8" y1="1059.6" x2="856.6" y2="1011.4" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="744.7" y="1028.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(-12.2 744.7 1035.5)">«include»</text>
+<line x1="579.7" y1="1296.9" x2="924.4" y2="1025.9" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="752.0" y="1154.4" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(-38.2 752.0 1161.4)">«include»</text>
+<line x1="659.2" y1="1316.6" x2="880.9" y2="1282.0" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="770.0" y="1292.3" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(-8.9 770.0 1299.3)">«include»</text>
+<line x1="1000.8" y1="1368.0" x2="1000.8" y2="1306.0" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1010.8" y="1342.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000">«extend»</text>
+<line x1="869.1" y1="855.1" x2="692.1" y2="864.4" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="780.6" y="852.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(357.0 780.6 859.8)">«extend»</text>
+<line x1="890.8" y1="784.3" x2="637.3" y2="847.8" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="764.0" y="809.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(345.9 764.0 816.0)">«extend»</text>
+<line x1="893.9" y1="428.8" x2="610.2" y2="501.2" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="752.0" y="458.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(345.7 752.0 465.0)">«extend»</text>
+<line x1="891.8" y1="626.2" x2="609.8" y2="553.4" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="750.8" y="582.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(14.5 750.8 589.8)">«extend»</text>
+<line x1="995.8" y1="445.5" x2="995.8" y2="507.5" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1005.8" y="481.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000">«include»</text>
+<line x1="867.4" y1="1592.0" x2="646.8" y2="1592.0" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="757.1" y="1585.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(360.0 757.1 1592.0)">«extend»</text>
+<line x1="867.4" y1="136.5" x2="555.7" y2="136.5" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="711.6" y="129.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(360.0 711.6 136.5)">«extend»</text>
+<line x1="975.5" y1="881.0" x2="975.5" y2="943.0" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="985.5" y="917.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000">«include»</text>
+<line x1="577.0" y1="1140.4" x2="887.0" y2="1020.1" stroke="#181818" stroke-width="1.3" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="732.0" y="1073.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle" transform="rotate(-21.2 732.0 1080.2)">«include»</text>
+<ellipse cx="467.9" cy="136.5" rx="87.9" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="467.9" y="132.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-02</text>
+<text x="467.9" y="150.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Iniciar sesión</text>
+<ellipse cx="478.0" cy="221.5" rx="98.0" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="478.0" y="217.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-25</text>
+<text x="478.0" y="235.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Gestionar perfil</text>
+<ellipse cx="518.5" cy="306.5" rx="138.5" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="518.5" y="302.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-27</text>
+<text x="518.5" y="320.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Consultar notificaciones</text>
+<ellipse cx="528.6" cy="1082.0" rx="148.6" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="528.6" y="1078.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-11</text>
+<text x="528.6" y="1096.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Publicar perro en adopción</text>
+<ellipse cx="528.6" cy="1337.0" rx="148.6" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="528.6" y="1324.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-08</text>
+<text x="528.6" y="1342.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Registrar reporte de perro</text>
+<text x="528.6" y="1360.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">encontrado</text>
+<ellipse cx="538.7" cy="872.5" rx="158.7" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="538.7" y="868.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-12</text>
+<text x="538.7" y="886.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Gestionar perros en adopción</text>
+<ellipse cx="508.3" cy="527.2" rx="128.3" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="508.3" y="514.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-15</text>
+<text x="508.3" y="532.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Revisar solicitudes de</text>
+<text x="508.3" y="550.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">adopción</text>
+<ellipse cx="513.4" cy="1592.0" rx="133.4" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="513.4" y="1588.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-28</text>
+<text x="513.4" y="1606.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Dar seguimiento a casos</text>
+<ellipse cx="975.5" cy="985.8" rx="148.6" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="975.5" y="972.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-41</text>
+<text x="975.5" y="990.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Analizar fotografía con la</text>
+<text x="975.5" y="1008.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">red neuronal</text>
+<ellipse cx="1000.8" cy="1263.2" rx="133.4" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="1000.8" y="1250.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-31</text>
+<text x="1000.8" y="1268.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Consultar coincidencias</text>
+<text x="1000.8" y="1286.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">sugeridas</text>
+<ellipse cx="975.5" cy="849.5" rx="108.1" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="975.5" y="845.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-13</text>
+<text x="975.5" y="863.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Editar publicación</text>
+<ellipse cx="990.7" cy="759.2" rx="123.3" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="990.7" y="746.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-14</text>
+<text x="990.7" y="764.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Eliminar o desactivar</text>
+<text x="990.7" y="782.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">publicación</text>
+<ellipse cx="995.8" cy="402.8" rx="128.3" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="995.8" y="389.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-16</text>
+<text x="995.8" y="407.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Aprobar solicitud y</text>
+<text x="995.8" y="425.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">contactar al adoptante</text>
+<ellipse cx="990.7" cy="651.8" rx="123.3" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="990.7" y="638.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-17</text>
+<text x="990.7" y="656.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Rechazar solicitud de</text>
+<text x="990.7" y="674.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">adopción</text>
+<ellipse cx="952.4" cy="1592.0" rx="85.0" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="952.4" y="1588.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-42</text>
+<text x="952.4" y="1606.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Cerrar caso</text>
+<ellipse cx="1000.8" cy="1410.8" rx="108.1" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="1000.8" y="1397.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-32</text>
+<text x="1000.8" y="1415.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Validar o rechazar</text>
+<text x="1000.8" y="1433.8" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">coincidencia</text>
+<ellipse cx="995.8" cy="550.2" rx="143.5" ry="42.8" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="995.8" y="537.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-35</text>
+<text x="995.8" y="555.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Consultar recomendaciones</text>
+<text x="995.8" y="573.2" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">por raza</text>
+<ellipse cx="508.3" cy="1167.0" rx="128.3" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="508.3" y="1163.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-33</text>
+<text x="508.3" y="1181.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Gestionar mis reportes</text>
+<ellipse cx="518.5" cy="1507.0" rx="138.5" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="518.5" y="1503.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-34</text>
+<text x="518.5" y="1521.0" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Revisar avisos recibidos</text>
+<ellipse cx="985.6" cy="136.5" rx="118.2" ry="31.5" fill="#F7F7F3" stroke="#0A5A97" stroke-width="1.2"/>
+<text x="985.6" y="132.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">CU-43</text>
+<text x="985.6" y="150.5" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="14" fill="#101826" text-anchor="middle">Recuperar contraseña</text>
+<circle cx="95" cy="818.25" r="11" fill="#F1F1F1" stroke="#0A5A97" stroke-width="1.3"/>
+<path d="M95,829.25 V859.25 M75,839.25 H115 M95,859.25 L79,882.25 M95,859.25 L111,882.25" fill="none" stroke="#0A5A97" stroke-width="1.3"/>
+<text x="87" y="904.25" font-family="Verdana, DejaVu Sans, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle">Refugio</text>
+</svg>

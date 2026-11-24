@@ -1,0 +1,90 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-37 Activar, desactivar o eliminar cuenta
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(UserController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador y la cuenta existe.
+
+U -> W : Acceder a «Usuarios» del panel
+activate W
+W --> U : Cuentas con rol y estado
+alt «Desactivar» (cuenta activa)
+  U -> W : Seleccionar «Desactivar»
+  alt operación exitosa
+    W -> A : Cambiar estado (PATCH /users/{id}/status {active: false})
+    activate A
+    A -> A : Verificar rol de Administrador
+    A -> DB : Actualizar estado (UPDATE users SET account_active = false)
+    activate DB
+    DB --> A : Cuenta actualizada
+    deactivate DB
+    A --> W : 200 Cuenta
+    deactivate A
+    W --> U : «Cuenta desactivada» y actualizar el listado
+  else FA-37-D: error al actualizar
+    W --> U : «No se pudo actualizar la cuenta»; conservar el estado
+  end
+else FA-37-A: la cuenta está inactiva, selecciona «Activar»
+  U -> W : Seleccionar «Activar»
+  W -> A : Cambiar estado (PATCH /users/{id}/status {active: true})
+  activate A
+  A -> DB : Actualizar estado (UPDATE users)
+  activate DB
+  DB --> A : Cuenta actualizada
+  deactivate DB
+  A --> W : 200 Cuenta
+  deactivate A
+  W --> U : «Cuenta activada»
+else FA-37-B: «Borrar»
+  U -> W : Seleccionar «Borrar»
+  W --> U : Confirmación
+  U -> W : Seleccionar «Borrar definitivamente»
+  W -> A : Eliminar cuenta (DELETE /users/{id})
+  activate A
+  A -> DB : Eliminar (DELETE users; en cascada sus solicitudes,\nnotificaciones y casos como responsable)
+  activate DB
+  DB --> A : Cuenta eliminada
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Elemento eliminado correctamente»
+end
+deactivate W
+note over U, DB : FA-37-C: si el titular de una cuenta inactiva intenta iniciar sesión, recibe «Cuenta desactivada» (CU-02).
+
+note over U, DB : Postcondición: la cuenta queda activa, inactiva o eliminada.
+@enduml

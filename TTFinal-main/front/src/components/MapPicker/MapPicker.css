@@ -1,0 +1,181 @@
+.map-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.map-picker-search {
+  position: relative;
+  z-index: 2; /* la lista de sugerencias queda por encima del mapa */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.map-picker-search > .btn {
+  flex: 0 0 auto;
+}
+
+/* Campo de busqueda con icono, indicador de carga y boton para borrar */
+.map-picker-combobox {
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+/* Mas especifico que .form-group input (theme.css) para que el icono no tape el texto. */
+.map-picker .map-picker-combobox input {
+  width: 100%;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.map-picker-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.map-picker-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text-soft);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.map-picker-clear:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.map-picker-spinner {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  border: 2px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 999px;
+  animation: map-picker-spin 0.7s linear infinite;
+}
+
+@keyframes map-picker-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Lista de sugerencias (estilo "a donde vas") */
+.map-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 340px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface, #fff);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+}
+
+.map-picker-suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+}
+
+.map-picker-suggestions li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius-xs, 8px);
+  cursor: pointer;
+}
+
+.map-picker-suggestions li.active {
+  background: #eef4fb;
+}
+
+.map-picker-suggestion-icon {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  font-size: 0.95rem;
+}
+
+.map-picker-suggestion-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.map-picker-suggestion-text strong {
+  color: var(--text);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.map-picker-suggestion-text strong mark {
+  background: none;
+  color: inherit;
+  font-weight: 800;
+}
+
+.map-picker-suggestion-text small {
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.map-picker-dropdown-note {
+  margin: 0;
+  padding: 10px 14px;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.map-picker-attribution {
+  margin: 0;
+  padding: 6px 12px 8px;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.map-picker-map {
+  height: 300px;
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  z-index: 0;
+}
+
+.map-picker-hint {
+  color: var(--text-soft);
+}
+
+.map-picker-hint strong {
+  color: var(--text);
+}

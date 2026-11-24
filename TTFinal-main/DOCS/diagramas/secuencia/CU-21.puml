@@ -1,0 +1,106 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-21 Administrar contenido
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(controladores de la plataforma)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador.
+
+opt FA-21-C: desde «Mis Anuncios»
+  U -> W : Acceder a «Mis Anuncios»
+  activate W
+  W -> A : Consultar todo el contenido (GET /pets,\nGET /reports y GET /reports/sightings)
+  activate A
+  A -> DB : Consultar pets, lost_pets y report_sightings
+  activate DB
+  DB --> A : Registros
+  deactivate DB
+  A --> W : 200 Listas
+  deactivate A
+  W --> U : Todas las publicaciones, reportes y avisos\ncon «Editar», «Desactivar» y «Eliminar»
+  deactivate W
+end
+U -> W : Acceder al panel de administración
+activate W
+alt operación exitosa
+  par consultas simultáneas
+    W -> A : Consultar cuentas (GET /users)
+    activate A
+  else
+    W -> A : Consultar autorizaciones (GET /publication-authorizations)
+  else
+    W -> A : Consultar solicitudes de adopción (GET /adoption-requests)
+  else
+    W -> A : Consultar reportes (GET /reports)
+  else
+    W -> A : Consultar perros (GET /pets?size=9999)
+  else
+    W -> A : Consultar casos (GET /cases)
+  end
+  A -> DB : Consultar users, publication_authorization_requests,\nadoption_requests, lost_pets, pets y cases
+  activate DB
+  DB --> A : Registros
+  deactivate DB
+  A --> W : 200 Listas
+  deactivate A
+  W --> U : Reporte general (CU-39) y tablas de decisión: perros, casos,\nautorizaciones, solicitudes de adopción y reportes
+  opt FA-21-A: una tabla no tiene registros
+    W --> U : Mensaje vacío de la tabla, por ejemplo «No hay reportes»\no «No hay casos registrados»
+  end
+  U -> W : Seleccionar un indicador o un elemento de una tabla
+  W --> U : Detalle del elemento
+  alt moderar un reporte
+    ref over U, DB : CU-23 Moderar reportes
+  else eliminar contenido
+    ref over U, DB : CU-24 Eliminar o desactivar contenido inapropiado
+  else revisar solicitudes de adopción y casos
+    ref over U, DB : CU-38 Supervisar solicitudes de adopción y casos
+  else atender una autorización
+    ref over U, DB : CU-22 Autorizar publicación a Usuario general
+  else revisar un perro
+    ref over U, DB : CU-19 Supervisar publicaciones
+  else FA-21-D: error al aplicar la acción
+    W --> U : Informar la falla y conservar el estado original
+  end
+  W -> W : Recargar las tablas
+  W --> U : Tablas actualizadas
+else FA-21-B: error al consultar
+  W --> U : Mostrar el mensaje de error
+end
+deactivate W
+
+note over U, DB : Postcondición: el contenido queda revisado y, en su caso, actualizado, cerrado, desactivado o eliminado.
+@enduml

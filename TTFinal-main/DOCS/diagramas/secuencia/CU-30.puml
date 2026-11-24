@@ -1,0 +1,76 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-30 Enviar aviso de avistamiento
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Mascotas Perdidas)" as W
+participant "API REST\n(ReportsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión y existe un reporte de perro extraviado o encontrado.
+
+ref over U, DB : CU-29 Consultar reportes de perros perdidos y encontrados (detalle del reporte)
+U -> W : Seleccionar la opción para enviar un aviso
+activate W
+W --> U : Formulario «¿Viste un perro parecido?» (reporte LOST)\no «¿Crees que es tu perro?» (reporte FOUND)
+U -> W : Capturar nombre, correo, teléfono, lugar e información,\ny adjuntar fotos (opcional, hasta 4 de 3 MB)
+opt una foto supera 3 MB
+  W --> U : «Cada imagen no debe superar 3MB»
+end
+W -> W : Validar nombre e información obligatorios
+break FA-30-A: falta el nombre o la información
+  W --> U : «Agrega tu nombre y la información del posible perro»
+end
+alt operación exitosa
+  W -> A : Enviar aviso (POST /reports/{reportId}/sightings multipart)
+  activate A
+  A -> DB : Consultar el reporte (lost_pets)
+  activate DB
+  DB --> A : Reporte y autor
+  deactivate DB
+  A -> A : Validar nombre y mensaje; guardar hasta 4 fotos
+  A -> DB : Registrar aviso (INSERT report_sightings, estado NEW)
+  activate DB
+  DB --> A : Aviso registrado
+  deactivate DB
+  A ->> DB : Notificar al autor del reporte (INSERT notifications)
+  A --> W : 200 Aviso
+  deactivate A
+  W --> U : «Aviso enviado al reporte»
+else FA-30-B: error al registrar
+  W --> U : «No se pudo enviar el aviso» y conservar los datos
+end
+deactivate W
+
+note over U, DB : Postcondición: el aviso queda registrado como nuevo y el autor del reporte recibe una notificación.
+@enduml

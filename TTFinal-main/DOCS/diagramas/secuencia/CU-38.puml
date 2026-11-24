@@ -1,0 +1,91 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-38 Supervisar solicitudes de adopción y casos
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(AdoptionRequestController / CasesController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador.
+
+U -> W : Acceder al panel de administración
+activate W
+W -> A : Consultar solicitudes y casos (GET /adoption-requests y GET /cases)
+activate A
+A -> DB : Consultar adoption_requests y cases
+activate DB
+DB --> A : Registros
+deactivate DB
+A --> W : 200 Listas
+deactivate A
+W --> U : Solicitudes con su estado y casos con su tipo y estado
+opt FA-38-A: selecciona «solicitudes pendientes» o «casos abiertos»
+  W -> W : Filtrar la tabla
+end
+break FA-38-B: no hay registros
+  W --> U : «No hay solicitudes de adopción» o «No hay casos registrados»
+end
+U -> W : Seleccionar una solicitud para ver su detalle
+W --> U : Detalle: perro, publicador, solicitante, contacto, fecha y mensaje
+U -> W : Seleccionar «Borrar solicitud» (o «Borrar caso» en un caso)
+W --> U : Confirmación «Acción definitiva»
+break FA-38-C: selecciona «Cancelar»
+  W --> U : Conservar el registro
+end
+U -> W : Seleccionar «Borrar definitivamente»
+alt solicitud
+  W -> A : Eliminar solicitud (DELETE /adoption-requests/{id}/admin)
+  activate A
+  A -> A : Verificar rol de Administrador
+  A -> DB : Eliminar (DELETE adoption_requests)
+  activate DB
+  DB --> A : Solicitud eliminada
+  deactivate DB
+  A --> W : 200
+  deactivate A
+else caso
+  W -> A : Eliminar caso (DELETE /cases/{id})
+  activate A
+  A -> DB : Eliminar (DELETE cases; en cascada case_messages)
+  activate DB
+  DB --> A : Caso eliminado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+end
+W --> U : «Elemento eliminado correctamente» y actualizar el listado
+deactivate W
+
+note over U, DB : Postcondición: la solicitud o el caso eliminado deja de existir en la plataforma.
+@enduml

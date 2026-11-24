@@ -1,0 +1,121 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-43 Recuperar contraseña
+autonumber
+
+actor "Usuario\n(cualquier rol)" as U
+participant "Interfaz web\n(Recuperar contraseña)" as W
+participant "API REST\n(LoginController / PasswordResetService)" as A
+participant "Servidor de correo\n(SMTP)" as SMTP
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor tiene una cuenta activa con un correo al que tiene acceso.
+
+U -> W : Seleccionar «¿Olvidaste tu contraseña?» en la pantalla de inicio de sesión
+activate W
+W --> U : Solicitar el correo de la cuenta
+U -> W : Capturar el correo y seleccionar «Enviar código»
+W -> A : Solicitar código (POST /auth/password-reset/request {email})
+activate A
+A -> DB : Buscar usuario activo por correo (users)
+activate DB
+alt FA-43-A: correo no registrado o cuenta desactivada
+  DB --> A : Sin usuario activo
+  note right of A : No se genera ni se envía código\n(no se revela qué correos existen).
+else usuario activo
+  DB --> A : Usuario
+  deactivate DB
+  A -> DB : Invalidar códigos anteriores y guardar el nuevo código cifrado\ncon vigencia de 15 minutos (UPDATE/INSERT password_reset_codes)
+  activate DB
+  DB --> A : Código guardado
+  deactivate DB
+  A ->> SMTP : Enviar correo con el código de 6 dígitos
+  note right of SMTP : Si el correo no está configurado,\nel código se escribe en el registro\ndel backend (modo de desarrollo).
+end
+A --> W : 200 «Si el correo está registrado, te enviamos un código…»
+deactivate A
+W --> U : Mensaje y formulario para el código y la nueva contraseña
+alt «Cambiar contraseña»
+  U -> W : Capturar código, nueva contraseña y confirmación,\ny seleccionar «Cambiar contraseña»
+  W -> W : Validar código de 6 dígitos y contraseña (≥ 6, mayúsculas,\nminúsculas y números, confirmación igual)
+  break FA-43-D: la contraseña no cumple o no coincide
+    W --> U : Señalar el campo
+  end
+  W -> A : Confirmar cambio (POST /auth/password-reset/confirm\n{email, code, newPassword})
+  activate A
+  A -> DB : Consultar el código vigente del usuario (password_reset_codes)
+  activate DB
+  alt FA-43-C: el código venció o ya se usó
+    DB --> A : Sin código vigente
+    A --> W : 400 «El código no es válido o ya venció. Solicita uno nuevo.»
+    W --> U : Mostrar el mensaje
+  else código vigente
+    DB --> A : Código
+    deactivate DB
+    A -> A : Verificar el código (BCrypt) y las reglas de la contraseña
+    alt FA-43-B: código incorrecto
+      A -> DB : Sumar intento (UPDATE password_reset_codes)
+      activate DB
+      DB --> A : Intento registrado
+      deactivate DB
+      alt quinto intento fallido
+        A -> DB : Invalidar el código (UPDATE password_reset_codes)
+        activate DB
+        DB --> A : Código invalidado
+        deactivate DB
+        A --> W : 400 «Demasiados intentos con este código. Solicita uno nuevo.»
+      else quedan intentos
+        A --> W : 400 «El código es incorrecto.»
+      end
+      W --> U : Mostrar el mensaje
+    else código correcto
+      A -> DB : Actualizar contraseña cifrada (UPDATE users) y marcar\nel código como usado (UPDATE password_reset_codes)
+      activate DB
+      DB --> A : Registros actualizados
+      deactivate DB
+      A -> A : Quitar el bloqueo por intentos fallidos, si existía
+      A --> W : 200 «Contraseña actualizada. Ya puedes iniciar sesión.»
+      deactivate A
+      W --> U : Mensaje y pantalla de inicio de sesión
+    end
+  end
+else FA-43-E: «Reenviar código»
+  U -> W : Seleccionar «Reenviar código»
+  note over W, SMTP : Se repite la solicitud del código (POST /auth/password-reset/request):\nel código anterior se invalida y no se envía más de un código por minuto.
+else FA-43-F: «Usar otro correo»
+  U -> W : Seleccionar «Usar otro correo»
+  W --> U : Volver a solicitar el correo
+end
+deactivate W
+
+note over U, DB : Postcondición: la contraseña queda actualizada y el actor puede iniciar sesión con ella (CU-02).
+@enduml

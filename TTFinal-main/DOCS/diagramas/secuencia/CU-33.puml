@@ -1,0 +1,157 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-33 Gestionar mis reportes
+autonumber
+
+actor "Autor del reporte\n(Usuario general o Refugio)" as U
+participant "Interfaz web\n(Mis Anuncios)" as W
+participant "OpenStreetMap\n(Nominatim)" as MAP
+participant "API REST\n(ReportsController)" as A
+participant "Servicio de IA\n(ml-service DogNet v2)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión y tiene al menos un reporte; solo el autor o el Administrador pueden modificarlo (RN-09).
+
+U -> W : Acceder a «Mis Anuncios»
+activate W
+W -> A : Consultar sus reportes (GET /reports/user/{userId})
+activate A
+A -> DB : Consultar reportes del autor (lost_pets)
+activate DB
+DB --> A : Reportes
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W --> U : Reportes registrados
+alt «Editar»
+  U -> W : Seleccionar «Editar» en un reporte
+  W --> U : Formulario con los datos y fotografías actuales; raza, color\ny alcaldía se eligen de los catálogos
+  U -> W : Modificar datos y ajustar el punto en el mapa
+  W -> MAP : Obtener la dirección del punto (GET /reverse)
+  activate MAP
+  MAP --> W : Dirección
+  deactivate MAP
+  W -> W : Actualizar la ubicación
+  U -> W : Seleccionar hasta 4 fotografías nuevas (opcional)\ny «Guardar cambios»
+  opt FA-33-F: más de 4 fotos o alguna de más de 5 MB
+    W --> U : «Selecciona máximo 4 fotos»\no «Cada foto debe pesar menos de 5 MB»
+  end
+  note right of W : FA-33-G: si no elige fotos nuevas,\nse conservan las actuales.
+  alt operación exitosa
+    W -> A : Actualizar reporte (PUT /reports/{id}; JSON, o multipart\ncon images[1..4] si hay fotos nuevas)
+    activate A
+    A -> DB : Consultar el reporte (lost_pets)
+    activate DB
+    DB --> A : Reporte y autor
+    deactivate DB
+    A -> A : Verificar que sea el autor o el Administrador
+    opt hay fotos nuevas
+      A -> IA : Verificar que sean perros (POST /describe)
+      activate IA
+      IA --> A : Resultado
+      deactivate IA
+      break FA-33-C: una foto nueva no es de perro
+        A --> W : 422 con el motivo
+        W --> U : Mostrar el motivo
+      end
+      A -> A : Guardar los archivos de las fotos
+    end
+    A -> DB : Actualizar reporte (UPDATE lost_pets; reemplaza\nla lista de fotos si hay nuevas)
+    activate DB
+    DB --> A : Reporte actualizado
+    deactivate DB
+    opt hay fotos nuevas
+      loop para cada foto
+        A -> IA : Obtener vector, raza, tamaño, etapa y colores (POST /analyze)
+        activate IA
+        IA --> A : Vector, raza, tamaño, etapa y colores
+        deactivate IA
+        A -> DB : Reemplazar vectores, raza, tamaño, etapa y colores (report_image_embeddings)
+        activate DB
+        DB --> A : Guardado
+        deactivate DB
+      end
+    end
+    ref over A, DB : CU-31 Consultar coincidencias sugeridas (se recalculan\ny se avisa si alguna pasa de 40 %)
+    A --> W : 200 Reporte
+    deactivate A
+    W --> U : «Reporte actualizado»
+  else FA-33-D: error al guardar
+    W --> U : «No se pudo actualizar el reporte» y conservar los datos
+  end
+else FA-33-A: «Desactivar»
+  U -> W : Seleccionar «Desactivar»
+  W -> A : Desactivar reporte (PATCH /reports/{id}/deactivate)
+  activate A
+  A -> A : Verificar que sea el autor o el Administrador
+  A -> DB : Cambiar a inactivo (UPDATE lost_pets SET status = INACTIVE)
+  activate DB
+  DB --> A : Reporte actualizado
+  deactivate DB
+  A --> W : 200 Reporte
+  deactivate A
+  W --> U : «Reporte desactivado»
+  note right of W : Deja de mostrarse en «Mascotas Perdidas»\ny en la búsqueda de coincidencias.
+else FA-33-B: «Eliminar»
+  U -> W : Seleccionar «Eliminar»
+  W --> U : Confirmación
+  U -> W : Seleccionar «Eliminar definitivamente»
+  W -> A : Eliminar reporte (DELETE /reports/{id})
+  activate A
+  A -> A : Verificar que sea el autor o el Administrador
+  A -> DB : Eliminar (DELETE lost_pets; en cascada avisos,\nvectores y coincidencias)
+  activate DB
+  DB --> A : Reporte eliminado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Reporte eliminado»
+else FA-33-E: «Ver coincidencias»
+  ref over U, DB : CU-32 Validar o rechazar coincidencia
+else FA-33-H: «Volver a comparar» (en el editor o en el detalle del reporte)
+  U -> W : Seleccionar «Volver a comparar»
+  W -> A : Recalcular coincidencias (POST /reports/{id}/matches/refresh)
+  activate A
+  A -> A : Verificar que sea el autor o el Administrador
+  A -> IA : Volver a analizar las fotos del reporte (POST /analyze)
+  activate IA
+  IA --> A : Vectores, raza, tamaño, etapa y colores
+  deactivate IA
+  ref over A, DB : CU-31 Consultar coincidencias sugeridas
+  A --> W : 200 Coincidencias
+  deactivate A
+  W --> U : Coincidencias con su porcentaje y desglose
+end
+deactivate W
+
+note over U, DB : Postcondición: el reporte queda actualizado, inactivo o eliminado según la acción elegida.
+@enduml

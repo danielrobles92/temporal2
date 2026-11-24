@@ -1,0 +1,30 @@
+# Carpetas que no se suben
+imagesDS/
+
+# Frontend
+front/node_modules/
+front/build/
+
+# Backend
+back/petproject/target/
+back/petproject/uploads/
+
+# Variables y archivos locales
+.env
+*.log
+.DS_Store
+Thumbs.db
+# despliegue publico (tunel)
+deploy/bin/
+deploy/*.log
+deploy/ENLACE.txt
+deploy/CUENTAS_PRUEBA.txt
+# respaldos locales de documentos y archivos de bloqueo de Word
+DOCS/*respaldo*.docx
+~$*
+
+# fotos que suben los usuarios (las de antes ya estan en el historial)
+back/uploads/
+# servidor en la nube: claves y datos de conexion locales
+deploy/nube/.env
+deploy/nube/servidor.local.bat

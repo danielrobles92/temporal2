@@ -1,0 +1,106 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-31 Consultar coincidencias sugeridas
+autonumber
+
+actor "Usuario general / Refugio" as U
+participant "Interfaz web\n(Publicar Anuncio)" as W
+participant "API REST\n(ReportsController,\nMatchScoring)" as A
+participant "Servicio de IA\n(ml-service DogNet v2)" as IA
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario acaba de registrar un reporte de perro extraviado o encontrado (CU-07 o CU-08); este caso de uso es incluido por ellos. El mismo cálculo se repite al editar el reporte (CU-33) y con «Volver a comparar».
+
+W -> A : Consultar coincidencias del reporte (GET /reports/{reportId}/matches)
+activate A
+A -> DB : Consultar el reporte (lost_pets)
+activate DB
+DB --> A : Reporte
+deactivate DB
+opt falta el análisis de alguna foto del reporte
+  loop para cada foto sin analizar
+    A -> IA : Obtener vector, raza, tamaño, etapa y colores (POST /analyze)
+    activate IA
+    IA --> A : Vector, raza, tamaño, etapa y colores
+    deactivate IA
+    A -> DB : Guardar (INSERT report_image_embeddings)
+    activate DB
+    DB --> A : Guardado
+    deactivate DB
+  end
+end
+A -> DB : Consultar los vectores y lo que detectó la red en las fotos\ndel reporte (report_image_embeddings)
+activate DB
+DB --> A : Vectores y análisis del reporte
+deactivate DB
+A -> DB : Consultar candidatos: perros en adopción o perdidos con sus vectores\n(pets, pet_image_embeddings) y reportes del tipo opuesto no inactivos\ncon sus vectores (lost_pets, report_image_embeddings)
+activate DB
+DB --> A : Candidatos
+deactivate DB
+loop para cada candidato
+  A -> A : Resumir lo que vio la red en las fotos de cada perro:\nraza con su certeza, tamaño, etapa y colores
+  alt FA-31-B: el candidato no tiene foto comparable
+    A -> A : Parecido 0/40 («sin foto comparable»); lo demás se calcula igual
+  else tiene fotos
+    A -> A : Lo que dice la foto (0-80): parecido 0-40 por el coseno del mejor par\n(0.40 → 0, 0.70 → 40), raza detectada 0-20 según su certeza,\ntamaño 8, etapa 4 y colores 8
+  end
+  A -> A : Lo que capturaron (0-20): ubicación 0-12 por distancia,\nsexo 4, raza y color capturados 4
+  A -> A : Topes si las fotos no son muy parecidas: 35 con razas distintas,\n40 a más de 10 km y 30 a más de 20 km; 30 si el sexo difiere
+  opt porcentaje de 20 o más
+    A -> DB : Registrar o actualizar la coincidencia con su desglose, conservando\nla decisión del usuario (INSERT/UPDATE matches)
+    activate DB
+    DB --> A : Coincidencia guardada
+    deactivate DB
+    opt FA-31-C: al guardar, editar o volver a comparar, pasa de 40 % por primera vez\ny el candidato es un reporte de otro usuario (no rechazado ni descartado)
+      A ->> DB : Notificar a quien publicó el otro reporte «Posible coincidencia (N %)\ncon tu reporte [perro]» (INSERT notifications, MATCH_FOUND)
+    end
+  end
+end
+A -> A : Ordenar de mayor a menor porcentaje y tomar los 10 primeros
+A --> W : 200 Coincidencias
+deactivate A
+alt FA-31-A: ningún candidato alcanza 20 %
+  W --> U : «No encontramos coincidencias por ahora»; el reporte queda publicado
+else hay coincidencias
+  W --> U : Ventana «Posibles coincidencias»: fotografía, raza, porcentaje y nivel,\nlo que vio la red en cada perro lado a lado y los bloques\n«Lo que dice la foto» (80) y «Lo que capturaron» (20)
+end
+U -> W : Seleccionar «Ver mi reporte» o «Continuar»
+activate W
+alt FA-31-D: «Ver mi reporte»
+  ref over U, DB : CU-32 Validar o rechazar coincidencia
+else «Continuar»
+  W --> U : Mostrar «Mascotas Perdidas»
+end
+deactivate W
+
+note over U, DB : Postcondición: las coincidencias quedan registradas como sugeridas y no se consideran confirmadas hasta su validación (RN-11).
+@enduml

@@ -1,0 +1,70 @@
+# PERREQUE en un servidor en la nube: base de datos, servicio de IA, backend y pagina web.
+# Se arranca en el servidor con:  docker compose up -d --build   (desde esta carpeta)
+# Las claves salen del archivo .env que crea instalar.sh (no se sube a GitHub).
+name: perreque
+
+services:
+  db:
+    build: ./db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pet_adoption
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?falta DB_PASSWORD en .env}
+    volumes:
+      - db-data:/var/lib/postgresql
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+      - ${DATOS_DIR:?falta DATOS_DIR en .env}/inicial:/datos:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d pet_adoption"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  ml:
+    build: ../../ml-service
+    restart: unless-stopped
+
+  backend:
+    build: ../../back/petproject
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      ml:
+        condition: service_started
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/pet_adoption
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?falta JWT_SECRET en .env}
+      MAIL_USERNAME: ${MAIL_USERNAME:-}
+      MAIL_PASSWORD: ${MAIL_PASSWORD:-}
+    # En CPU el analisis tarda mas que con la GPU de la laptop: se da mas tiempo al servicio de IA.
+    command:
+      - --mlservice.base-url=http://ml:8000
+      - --mlservice.timeout-ms=60000
+      - --app.upload-dir=/data/uploads
+    volumes:
+      - ${DATOS_DIR}/uploads:/data/uploads
+
+  web:
+    build: ../../front
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      DOMINIO: ${DOMINIO:?falta DOMINIO en .env}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  db-data:
+  caddy-data:
+  caddy-config:

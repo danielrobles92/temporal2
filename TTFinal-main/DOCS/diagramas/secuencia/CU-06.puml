@@ -1,0 +1,73 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-06 Consultar solicitudes realizadas
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Solicitudes)" as W
+participant "API REST\n(AdoptionRequestController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión.
+
+U -> W : Seleccionar «Solicitudes» en su menú
+activate W
+alt operación exitosa
+  W -> A : Consultar solicitudes del usuario\n(GET /adoption-requests/user/{userId})
+  activate A
+  A -> DB : Consultar solicitudes con el perro y su responsable\n(adoption_requests, pets, users)
+  activate DB
+  DB --> A : Solicitudes
+  deactivate DB
+  A --> W : 200 Lista de solicitudes
+  deactivate A
+  W --> U : Tarjetas con fotografía y nombre del perro, responsable, fecha, mensaje\ny estado («Pendiente», «En contacto», «Adoptado» o «Cancelada»)
+  U -> W : Seleccionar el filtro «realizadas» o «pendientes»
+  break FA-06-A: no hay solicitudes para el filtro
+    W --> U : «No hay solicitudes para este filtro»
+  end
+  W --> U : Listado filtrado
+  U -> W : Seleccionar una solicitud
+  W --> U : Detalle: estado, fecha y hora, publicador, datos de contacto\nenviados, mensaje y notas de la decisión
+  opt FA-06-C: la solicitud está pendiente
+    ref over U, DB : CU-26 Cancelar solicitud de adopción
+  end
+  opt FA-06-D: la solicitud está «En contacto»
+    ref over U, DB : CU-28 Dar seguimiento a casos
+  end
+else FA-06-B: error al consultar
+  W --> U : Mostrar el mensaje de error
+end
+deactivate W
+
+note over U, DB : Postcondición: el usuario conoce el estado de sus solicitudes sin modificarlas.
+@enduml

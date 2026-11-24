@@ -1,0 +1,40 @@
+{
+  "elegido": "2026-11-11 con experiments/banco_vistas.py y experiments/banco_vistas_reglas.py (resultados_vistas*.json)",
+  "regla": "Es perro si el centro lo ve (regla calibrada de siempre) o si una seccion pasa una de dos pruebas: (a) DogNet muy seguro, P(no es perro) < estricta_no_perro, y ImageNet tambien ve perro (>= estricta_imagenet_perro); (b) DogNet lo ve, P(no es perro) < detector_no_perro, y el detector SSDLite encuentra un perro (puntaje >= detector_min) con al menos detector_dentro de su caja dentro de esa seccion. Los datos salen del centro si ve al perro, salvo que una seccion de la prueba (a) tenga mas de margen_centro de P(perro) por encima; si el centro no lo ve, de la seccion con mayor P(perro).",
+  "params": {
+    "estricta_no_perro": 0.1,
+    "estricta_imagenet_perro": 0.1,
+    "detector_no_perro": 0.5,
+    "detector_min": 0.3,
+    "detector_dentro": 0.5,
+    "margen_centro": 0.1
+  },
+  "medido": {
+    "nota": "porcentaje de fotos aceptadas como perro (grupos de perro) o rechazadas (grupos sin perro); antes = solo el recorte central",
+    "perro_en_la_orilla": {
+      "coco_orilla_natural (187)": {"antes": 49.73, "ahora": 79.14},
+      "coco_orilla_recorte (130)": {"antes": 33.08, "ahora": 83.08},
+      "oi_orilla_recorte (22)": {"antes": 63.64, "ahora": 81.82},
+      "compuestas_perro (400, modelo de validacion)": {"antes": 13.5, "ahora": 76.25}
+    },
+    "fotos_de_un_perro": {
+      "val (modelo de validacion)": {"antes": 99.84, "ahora": 99.94},
+      "oi_todas (1756)": {"antes": 99.15, "ahora": 99.32},
+      "coco_un_perro (400)": {"antes": 92.5, "ahora": 95.25}
+    },
+    "no_perro_detectado": {
+      "val (modelo de validacion)": {"antes": 97.59, "ahora": 96.59},
+      "compuestas_no_perro (400)": {"antes": 92.25, "ahora": 89.0},
+      "coco_no_perro (739)": {"antes": 95.26, "ahora": 94.99},
+      "coco_otros_animales (360)": {"antes": 92.78, "ahora": 92.5}
+    },
+    "raza_correcta_val": {"antes": 87.91, "ahora": 88.2},
+    "descartadas": {
+      "secciones_con_el_umbral_del_centro (0.5)": "orilla 82-88 %, pero no-perro COCO 90.5 % y otros animales 85.6 % (el doble de animales aceptados como perro)",
+      "solo_prueba_estricta (0.1 + ImageNet 0.1)": "no-perro igual que antes, pero orilla COCO 70.6 / 77.7 %",
+      "solo_detector": "orilla COCO 79 / 81 %, pero composiciones 46 %",
+      "bloquear_si_el_centro_ve_otro_animal": "baja la orilla real sin mejorar el no-perro (el centro ve 'animal' en fondos)",
+      "datos_de_la_vista_mas_segura_siempre": "raza en validacion 87.3 % (vs 88.2 %)"
+    }
+  }
+}

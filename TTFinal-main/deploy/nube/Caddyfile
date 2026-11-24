@@ -1,0 +1,34 @@
+# Caddy: da el HTTPS (certificado gratis de Let's Encrypt, se renueva solo), sirve la pagina
+# de React y reenvia la API al backend. Mismas rutas que deploy/gateway.js.
+{$DOMINIO} {
+	encode zstd gzip
+
+	request_body {
+		max_size 25MB
+	}
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+
+	@api path_regexp api ^/(auth|users|pets|reports|adoption-requests|publication-authorizations|cases|notifications|images|uploads|blocks|chat-reports)(/|$)
+	handle @api {
+		reverse_proxy backend:8080 {
+			# misma pagina: no hace falta CORS en el backend
+			header_up -Origin
+			header_up -Referer
+		}
+	}
+
+	handle {
+		root * /srv
+		@static path /static/*
+		header @static Cache-Control "public, max-age=31536000, immutable"
+		@pagina not path /static/*
+		header @pagina Cache-Control "no-cache"
+		try_files {path} /index.html
+		file_server
+	}
+}

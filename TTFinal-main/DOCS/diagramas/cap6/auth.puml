@@ -1,0 +1,54 @@
+@startuml
+!include style.iuml
+mainframe sd Autenticación con JWT
+autonumber
+actor "Usuario" as U
+participant "Interfaz web\n(Login.js / AuthContext)" as W
+participant "JwtFilter" as F
+participant "LoginController /\nLoginServiceImpl" as A
+participant "JwtUtil" as J
+database "PostgreSQL\n(users)" as DB
+
+U -> W : Capturar correo, contraseña\ny «Recordarme» (opcional)
+activate W
+W -> A : POST /auth/login {email, password, rememberMe}
+activate A
+A -> A : ¿Correo bloqueado por intentos fallidos?\n(LoginAttemptService: 5 intentos, 15 min)
+A -> DB : findByEmail(email)
+activate DB
+DB --> A : UserEntity (hash BCrypt, rol, cuenta activa)
+deactivate DB
+A -> A : BCrypt.verify(password, hash)
+alt credenciales válidas
+  A -> J : generateToken(username, role, id, pub, rememberMe)
+  activate J
+  J --> A : JWT firmado HS256\n(vigencia 4 h, o 7 días con «Recordarme»)
+  deactivate J
+  A --> W : 200 {success: true, token, role, id, publishingAuthorized}
+  W -> W : Guardar token y usuario en localStorage
+  W --> U : Redirigir a /home
+else correo inexistente o contraseña incorrecta
+  A --> W : 200 {success: false, "Correo o contraseña incorrectos"}
+  deactivate A
+  W --> U : Mostrar mensaje genérico
+end
+== Peticiones posteriores ==
+U -> W : Usar una función protegida (p. ej. publicar)
+W -> F : POST /pets\nAuthorization: Bearer <token>
+activate F
+F -> J : extractClaims(token)
+activate J
+J --> F : claims (sub, role, id, pub, exp)
+deactivate J
+F -> F : SecurityContext ← AuthUser +\nROLE_<rol> (+ ROLE_PUBLISHER)
+alt token válido y rol permitido
+  F --> W : la petición continúa al controlador
+else sin token o token vencido
+  F --> W : 401 No autenticado
+  W --> U : Cerrar sesión y volver a /login
+else autenticado sin permiso
+  F --> W : 403 Prohibido
+  deactivate F
+end
+deactivate W
+@enduml

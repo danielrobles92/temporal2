@@ -1,0 +1,140 @@
+.legal-page {
+  padding: 32px 16px 56px;
+}
+
+.legal-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 36px 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.legal-card h1 {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 1.9rem;
+}
+
+.legal-meta {
+  margin: 0 0 24px;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.legal-card h2 {
+  margin: 28px 0 8px;
+  color: var(--primary-dark);
+  font-size: 1.15rem;
+}
+
+.legal-card p,
+.legal-card li {
+  font-size: 0.98rem;
+}
+
+.legal-card p {
+  margin: 0 0 10px;
+}
+
+.legal-card ul {
+  margin: 6px 0 12px;
+  padding-left: 22px;
+}
+
+.legal-card li {
+  margin: 4px 0;
+}
+
+.legal-nota {
+  margin: 0 0 20px;
+}
+
+.legal-indice {
+  margin: 0 0 8px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  background: var(--surface-soft);
+}
+
+.legal-indice-titulo {
+  margin: 0 0 6px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.legal-indice ol {
+  margin: 0;
+  padding-left: 22px;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.legal-indice li {
+  margin: 0;
+  padding: 2px 0;
+  break-inside: avoid;
+  font-size: 0.93rem;
+}
+
+.legal-indice a {
+  font-weight: 500;
+}
+
+/* Deja libre el alto del encabezado fijo al saltar desde el índice. */
+.legal-seccion {
+  scroll-margin-top: 90px;
+}
+
+.legal-seccion h2:focus {
+  outline: none;
+}
+
+.legal-cierre {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.legal-tabla {
+  width: 100%;
+  margin: 8px 0 12px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.legal-tabla th,
+.legal-tabla td {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-tabla th {
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+}
+
+.legal-card a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .legal-card {
+    padding: 24px 18px;
+  }
+  .legal-card h1 {
+    font-size: 1.5rem;
+  }
+  .legal-indice ol {
+    columns: 1;
+  }
+}

@@ -1,0 +1,11 @@
+.venv
+venv
+env
+__pycache__
+*.pyc
+.cache
+.env
+analisis
+experiments
+models/backup_mx20_stanford
+*.log

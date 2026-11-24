@@ -1,0 +1,88 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-09 Solicitar autorización para publicar perro en adopción
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Mi Perfil)" as W
+participant "API REST\n(AuthorizationController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión como Usuario general, sin autorización vigente ni solicitud pendiente.
+
+U -> W : Acceder a «Mi Perfil»
+activate W
+note over U, W : FA-09-A: también se llega desde «Solicitar autorización\npara publicar» en «Mis Anuncios» o desde el aviso\ndel formulario «Publicar Anuncio».
+W -> A : Consultar sus solicitudes de autorización\n(GET /publication-authorizations/user/{userId})
+activate A
+A -> DB : Consultar solicitudes (publication_authorization_requests)
+activate DB
+DB --> A : Solicitudes
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W -> W : Revisar el estado de la última solicitud\ny el permiso de la sesión
+alt FA-09-B: tiene una solicitud pendiente
+  W --> U : La opción aparece como «Autorización pendiente», deshabilitada
+else FA-09-C: ya autorizado, o es Refugio o Administrador
+  W --> U : No mostrar la opción
+else FA-09-D: la última fue rechazada o no tiene solicitudes
+  W --> U : Opción «Solicitar permiso para publicar»
+  U -> W : Seleccionar la opción
+  alt operación exitosa
+    W -> A : Registrar solicitud (POST /publication-authorizations {userId, reason})
+    activate A
+    A -> DB : Consultar el usuario y si tiene solicitudes pendientes\n(users, publication_authorization_requests)
+    activate DB
+    alt FA-09-E: ya tiene autorización o solicitud pendiente
+      DB --> A : Autorización vigente o solicitud pendiente
+      A --> W : 400 «El usuario ya cuenta con autorización\no tiene una solicitud pendiente»
+      W --> U : Mostrar el mensaje
+    else sin autorización ni solicitud pendiente
+      DB --> A : Sin autorización ni solicitud pendiente
+      deactivate DB
+      A -> DB : Registrar solicitud (INSERT publication_authorization_requests, estado PENDING,\nmotivo «Deseo publicar perros en adopción dentro de la plataforma.»)
+      activate DB
+      DB --> A : Solicitud registrada
+      deactivate DB
+      A --> W : 200 Solicitud
+      deactivate A
+      W --> U : «Solicitud de autorización enviada» y la opción cambia\na «Autorización pendiente» (deshabilitada)
+    end
+  else FA-09-F: error al registrar
+    W --> U : Informar la falla
+  end
+end
+deactivate W
+
+note over U, DB : Postcondición: la solicitud queda pendiente de revisión por el Administrador (CU-22).
+@enduml

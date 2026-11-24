@@ -1,0 +1,94 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-28 Dar seguimiento a casos
+autonumber
+
+actor "Participante del caso\n(Usuario general o Refugio)" as U
+participant "Interfaz web\n(Casos)" as W
+participant "API REST\n(CasesController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión y participa en un caso abierto desde una solicitud (CU-16) o desde un aviso (CU-34).
+
+U -> W : Acceder a «Casos»
+activate W
+W -> A : Consultar sus casos (GET /cases/user/{userId})
+activate A
+A -> DB : Consultar casos donde es responsable o participante (cases)
+activate DB
+DB --> A : Casos
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W --> U : Casos agrupados por tipo (adopción o perdido) con su estado
+opt FA-28-A: filtro todos, adopción, perdidos, abiertos o cerrados
+  W -> W : Filtrar los casos
+  W --> U : Casos del filtro
+end
+break FA-28-B: sin casos para el filtro
+  W --> U : «Sin casos para este filtro»
+end
+U -> W : Seleccionar un caso
+W -> A : Consultar detalle (GET /cases/{caseId})
+activate A
+A -> DB : Consultar caso y mensajes (cases, case_messages)
+activate DB
+DB --> A : Caso con historial
+deactivate DB
+A --> W : 200 Caso
+deactivate A
+W --> U : Detalle del caso e historial de mensajes
+opt FA-28-E: el usuario es el responsable del caso
+  ref over U, DB : CU-42 Cerrar caso
+end
+U -> W : Escribir mensaje, adjuntar hasta 4 fotos (opcional)\ny seleccionar «Enviar mensaje»
+break FA-28-C: una foto pesa más de 5 MB
+  W --> U : «Cada foto debe pesar menos de 5 MB»
+end
+break FA-28-D: sin texto ni fotos
+  W --> U : «Escribe un mensaje o adjunta fotos para el caso»
+end
+W -> A : Registrar mensaje (POST /cases/{caseId}/messages;\nmultipart si hay fotos)
+activate A
+A -> A : Guardar las fotos adjuntas
+A -> DB : Registrar mensaje y actualizar el último mensaje del caso\n(INSERT case_messages, UPDATE cases)
+activate DB
+DB --> A : Mensaje registrado
+deactivate DB
+A ->> DB : Notificar al otro participante (INSERT notifications)
+A --> W : 200 Caso actualizado
+deactivate A
+W --> U : «Mensaje enviado» y el historial actualizado
+deactivate W
+
+note over U, DB : Postcondición: el mensaje queda registrado en el caso y el otro participante recibe una notificación.
+@enduml

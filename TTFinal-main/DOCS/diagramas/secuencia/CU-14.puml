@@ -1,0 +1,93 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-14 Eliminar o desactivar publicación
+autonumber
+
+actor "Responsable de la publicación" as U
+participant "Interfaz web\n(Mis Anuncios)" as W
+participant "API REST\n(PetsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor es el responsable de la publicación o el Administrador (RN-09) y la publicación existe (CU-12).
+
+U -> W : Seleccionar una acción sobre la publicación
+activate W
+note right of W : FA-14-B: si la publicación ya está inactiva,\nla opción «Desactivar» no se muestra; se reactiva\ncambiando su estado a Disponible (CU-13).
+alt «Eliminar»
+  W --> U : Confirmación «Esta acción eliminará definitivamente\nla publicación de adopción.»
+  break FA-14-C: selecciona «Cancelar»
+    W --> U : Conservar la publicación sin cambios
+  end
+  U -> W : Seleccionar «Eliminar definitivamente»
+  alt operación exitosa
+    W -> A : Eliminar publicación (DELETE /pets/{id})
+    activate A
+    A -> DB : Consultar la publicación (pets)
+    activate DB
+    DB --> A : Responsable de la publicación
+    deactivate DB
+    A -> A : Verificar que sea el responsable o el Administrador
+    break no es el responsable ni el Administrador
+      A --> W : 403 «No autorizado»
+      W --> U : Mostrar el error
+    end
+    A -> DB : Eliminar (DELETE pets; en cascada pet_images,\npet_image_embeddings, pet_vaccines y adoption_requests)
+    activate DB
+    DB --> A : Eliminada
+    deactivate DB
+    A --> W : 200
+    deactivate A
+    W --> U : «Publicación eliminada» y actualizar el listado
+  else FA-14-D: error al eliminar
+    W --> U : Informar la falla y conservar la publicación
+  end
+else FA-14-A: «Desactivar»
+  W -> A : Desactivar publicación (PATCH /pets/{id}/deactivate)
+  activate A
+  A -> DB : Consultar la publicación (pets)
+  activate DB
+  DB --> A : Responsable de la publicación
+  deactivate DB
+  A -> A : Verificar que sea el responsable o el Administrador
+  A -> DB : Cambiar a inactiva (UPDATE pets SET status = INACTIVE)
+  activate DB
+  DB --> A : Publicación actualizada
+  deactivate DB
+  A --> W : 200 Publicación
+  deactivate A
+  W --> U : «Publicación desactivada»
+  note right of W : Deja de mostrarse en «Adopción»\ny en la búsqueda de coincidencias.
+end
+deactivate W
+
+note over U, DB : Postcondición: la publicación queda eliminada o inactiva según la acción elegida.
+@enduml

@@ -1,0 +1,88 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-23 Moderar reportes
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(ReportsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador (RN-12) y existen reportes registrados (CU-07 o CU-08).
+
+U -> W : Acceder a la tabla «Reportes» del panel (cargada con GET /reports)
+activate W
+W --> U : Reportes con fotografía, nombre, tipo, ubicación, autor, fecha\ny estado («Abierto», «Cerrado» o «Inactivo»)
+opt FA-23-D: selecciona «perdidos», «encontrados» o «reportes abiertos»
+  W -> W : Filtrar la tabla
+  opt sin registros
+    W --> U : «No hay reportes.»
+  end
+end
+U -> W : Seleccionar un reporte
+W --> U : Detalle: autor, correo, ubicación, fecha, raza, sexo,\ncolor, teléfono y descripción
+alt «Cerrar caso»
+  U -> W : Seleccionar «Cerrar caso»
+  alt operación exitosa
+    W -> A : Moderar reporte (PATCH /reports/{id}/moderation\n{status: RESOLVED, notes: «Reporte marcado como resuelto.»})
+    activate A
+    A -> A : Verificar rol de Administrador (RN-12)
+    A -> DB : Actualizar estado y nota (UPDATE lost_pets)
+    activate DB
+    DB --> A : Reporte actualizado
+    deactivate DB
+    A --> W : 200 Reporte
+    deactivate A
+    W --> U : «Reporte actualizado correctamente» y recargar la tabla
+  else FA-23-E: error al actualizar
+    W --> U : Mostrar el error; conservar el estado
+  end
+else FA-23-A: el reporte ya está cerrado, selecciona «Reabrir»
+  U -> W : Seleccionar «Reabrir»
+  W -> A : Moderar reporte (PATCH /reports/{id}/moderation\n{status: OPEN, notes: «Caso reabierto por administración.»})
+  activate A
+  A -> DB : Actualizar estado y nota (UPDATE lost_pets)
+  activate DB
+  DB --> A : Reporte actualizado
+  deactivate DB
+  A --> W : 200 Reporte
+  deactivate A
+  W --> U : «Reporte actualizado correctamente»
+else FA-23-B: «Ir al detalle»
+  ref over U, DB : CU-32 Validar o rechazar coincidencia (detalle del reporte)
+else FA-23-C: «Borrar»
+  ref over U, DB : CU-24 Eliminar o desactivar contenido inapropiado
+end
+deactivate W
+
+note over U, DB : Postcondición: el reporte queda abierto, cerrado o eliminado según la acción elegida.
+@enduml

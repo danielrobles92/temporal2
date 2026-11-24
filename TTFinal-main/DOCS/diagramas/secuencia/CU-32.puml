@@ -1,0 +1,94 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-32 Validar o rechazar coincidencia
+autonumber
+
+actor "Autor del reporte" as U
+participant "Interfaz web\n(Detalle del reporte)" as W
+participant "API REST\n(ReportsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: existen coincidencias sugeridas para el reporte (CU-31); solo el autor del reporte o el Administrador pueden validarlas o rechazarlas (RN-09).
+
+U -> W : Abrir el detalle de su reporte con «Ver mi reporte», con «Ver coincidencias»\nen «Mis Anuncios» o desde la notificación de coincidencia
+activate W
+W -> A : Consultar el reporte (GET /reports/{reportId})
+activate A
+A --> W : 200 Reporte
+deactivate A
+W -> A : Consultar coincidencias (GET /reports/{reportId}/matches)
+activate A
+ref over A, DB : CU-31 Consultar coincidencias sugeridas (cálculo)
+A --> W : 200 Coincidencias
+deactivate A
+break FA-32-A: no hay coincidencias
+  W --> U : «No hay coincidencias potenciales registradas.»
+end
+W -> W : Verificar si el usuario es el autor del reporte o el Administrador
+break FA-32-D: no es el autor ni el Administrador
+  W --> U : Coincidencias sin «Validar» ni «Rechazar»
+end
+W --> U : Coincidencias con porcentaje, puntaje, motivo y estado,\ncon «Validar» y «Rechazar»
+note right of W : FA-32-B: si la coincidencia ya tiene el estado\nelegido, el botón correspondiente aparece\ndeshabilitado.
+alt «Validar»
+  U -> W : Seleccionar «Validar» en una coincidencia
+  W -> A : Cambiar estado (PATCH /reports/matches/{matchId}/status\n{status: VALIDATED})
+  activate A
+else «Rechazar»
+  U -> W : Seleccionar «Rechazar» en una coincidencia
+  W -> A : Cambiar estado (PATCH /reports/matches/{matchId}/status\n{status: REJECTED})
+end
+A -> DB : Consultar la coincidencia y su reporte (matches, lost_pets)
+activate DB
+DB --> A : Coincidencia y autor del reporte
+deactivate DB
+A -> A : Verificar que sea el autor o el Administrador
+break sin sesión o usuario ajeno
+  A --> W : 401 o 403
+  W --> U : Mostrar el error
+end
+alt operación exitosa
+  A -> DB : Actualizar estado (UPDATE matches)
+  activate DB
+  DB --> A : Coincidencia actualizada
+  deactivate DB
+  A --> W : 200 Coincidencia
+  W --> U : Estado «Validada» o «Rechazada» y aviso\n«Coincidencia validada» o «Coincidencia rechazada»
+else FA-32-C: error al actualizar
+  A --> W : Error
+  deactivate A
+  W --> U : «No se pudo actualizar la coincidencia»; conservar el estado anterior
+end
+deactivate W
+
+note over U, DB : Postcondición: la coincidencia queda validada o rechazada; si se recalculan las coincidencias, se conserva la decisión.
+@enduml

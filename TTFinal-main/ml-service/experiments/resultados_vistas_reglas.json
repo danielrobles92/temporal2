@@ -1,0 +1,9538 @@
+[
+ {
+  "cfg": {
+   "t_sec": -1.0,
+   "g_min": 2.0,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.84,
+   "no_perro": 97.59,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 13.5,
+   "no_perro": null,
+   "raza": 1.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 92.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 49.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 33.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 95.19,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 86.0,
+   "no_perro": null,
+   "raza": 48.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 98.04,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.49,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 87.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 90.53,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 85.56,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 95.19,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 86.0,
+   "no_perro": null,
+   "raza": 47.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 98.04,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.49,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 87.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 90.53,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 85.56,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 95.19,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 86.0,
+   "no_perro": null,
+   "raza": 45.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 98.04,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.49,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 87.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 90.53,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 85.56,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 95.19,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 86.0,
+   "no_perro": null,
+   "raza": 41.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 98.04,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.49,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 87.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 90.53,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 85.56,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.09,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 83.0,
+   "no_perro": null,
+   "raza": 46.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.94,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.64,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.09,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 83.0,
+   "no_perro": null,
+   "raza": 45.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.94,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.64,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.09,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 83.0,
+   "no_perro": null,
+   "raza": 43.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.94,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.64,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.09,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 83.0,
+   "no_perro": null,
+   "raza": 39.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 76.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.94,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.64,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.12,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 47.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.23,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.72,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.12,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 46.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.23,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.72,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.12,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 44.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.23,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.72,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.12,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 40.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.23,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.72,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 77.5,
+   "no_perro": null,
+   "raza": 46.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.5,
+   "no_perro": null,
+   "raza": 45.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.5,
+   "no_perro": null,
+   "raza": 42.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.5,
+   "no_perro": null,
+   "raza": 38.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 83.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.48,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 46.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 73.8,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.48,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 45.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 73.8,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.48,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 42.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 73.8,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.48,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 39.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 73.8,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.39,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 71.25,
+   "no_perro": null,
+   "raza": 44.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.72,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.25,
+   "no_perro": null,
+   "raza": 43.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.72,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.25,
+   "no_perro": null,
+   "raza": 41.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.72,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.25,
+   "no_perro": null,
+   "raza": 37.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.72,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 67.25,
+   "no_perro": null,
+   "raza": 43.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 67.25,
+   "no_perro": null,
+   "raza": 42.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 67.25,
+   "no_perro": null,
+   "raza": 40.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 67.25,
+   "no_perro": null,
+   "raza": 36.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 64.5,
+   "no_perro": null,
+   "raza": 41.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 64.5,
+   "no_perro": null,
+   "raza": 40.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 64.5,
+   "no_perro": null,
+   "raza": 38.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 64.5,
+   "no_perro": null,
+   "raza": 34.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.3,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 83.5,
+   "no_perro": null,
+   "raza": 48.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.68,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.1,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.44,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.3,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 83.5,
+   "no_perro": null,
+   "raza": 47.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.68,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.1,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.44,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.3,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 83.5,
+   "no_perro": null,
+   "raza": 44.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.68,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.1,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.44,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.3,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 83.5,
+   "no_perro": null,
+   "raza": 40.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.68,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 83.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 93.1,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 89.44,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 80.5,
+   "no_perro": null,
+   "raza": 46.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 80.5,
+   "no_perro": null,
+   "raza": 45.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 80.5,
+   "no_perro": null,
+   "raza": 43.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 80.5,
+   "no_perro": null,
+   "raza": 39.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 82.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.32,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.7,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 78.75,
+   "no_perro": null,
+   "raza": 47.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 81.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.05,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 90.83,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.7,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 78.75,
+   "no_perro": null,
+   "raza": 46.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 81.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.05,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 90.83,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.7,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 78.75,
+   "no_perro": null,
+   "raza": 44.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 81.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.05,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 90.83,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.7,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 78.75,
+   "no_perro": null,
+   "raza": 40.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 86.36,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 81.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.05,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 90.83,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 76.0,
+   "no_perro": null,
+   "raza": 45.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.12,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 76.0,
+   "no_perro": null,
+   "raza": 44.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.12,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 76.0,
+   "no_perro": null,
+   "raza": 42.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.12,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 76.0,
+   "no_perro": null,
+   "raza": 38.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.12,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 73.25,
+   "no_perro": null,
+   "raza": 46.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 73.25,
+   "no_perro": null,
+   "raza": 45.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 73.25,
+   "no_perro": null,
+   "raza": 42.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.84,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 73.25,
+   "no_perro": null,
+   "raza": 39.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 70.5,
+   "no_perro": null,
+   "raza": 44.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 70.5,
+   "no_perro": null,
+   "raza": 43.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 70.5,
+   "no_perro": null,
+   "raza": 40.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 70.5,
+   "no_perro": null,
+   "raza": 37.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.98,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 66.5,
+   "no_perro": null,
+   "raza": 43.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.5,
+   "no_perro": null,
+   "raza": 42.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.5,
+   "no_perro": null,
+   "raza": 39.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.5,
+   "no_perro": null,
+   "raza": 36.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 63.75,
+   "no_perro": null,
+   "raza": 41.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.75,
+   "no_perro": null,
+   "raza": 40.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.75,
+   "no_perro": null,
+   "raza": 38.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.75,
+   "no_perro": null,
+   "raza": 34.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.24,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 64.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.59,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 47.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.11,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.59,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 46.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.11,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.59,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 44.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.11,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.59,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 80.25,
+   "no_perro": null,
+   "raza": 40.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.43,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.18,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.11,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 77.25,
+   "no_perro": null,
+   "raza": 46.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.19,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.25,
+   "no_perro": null,
+   "raza": 45.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.19,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.25,
+   "no_perro": null,
+   "raza": 42.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.19,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.38,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 77.25,
+   "no_perro": null,
+   "raza": 38.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 84.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.19,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.8,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 76.75,
+   "no_perro": null,
+   "raza": 47.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.8,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.75,
+   "no_perro": null,
+   "raza": 46.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.8,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.75,
+   "no_perro": null,
+   "raza": 43.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.8,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.75,
+   "no_perro": null,
+   "raza": 39.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.59,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 91.94,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 45.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.05,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 72.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 44.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.05,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 72.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 41.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.05,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 72.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 38.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.05,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 72.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.91,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 72.5,
+   "no_perro": null,
+   "raza": 45.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.91,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 72.5,
+   "no_perro": null,
+   "raza": 44.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.91,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 72.5,
+   "no_perro": null,
+   "raza": 42.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.91,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 72.5,
+   "no_perro": null,
+   "raza": 38.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 69.75,
+   "no_perro": null,
+   "raza": 43.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 69.75,
+   "no_perro": null,
+   "raza": 42.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 69.75,
+   "no_perro": null,
+   "raza": 40.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 69.75,
+   "no_perro": null,
+   "raza": 36.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 66.25,
+   "no_perro": null,
+   "raza": 42.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.25,
+   "no_perro": null,
+   "raza": 41.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.25,
+   "no_perro": null,
+   "raza": 39.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 66.25,
+   "no_perro": null,
+   "raza": 36.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.91,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 63.5,
+   "no_perro": null,
+   "raza": 41.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 64.71,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.5,
+   "no_perro": null,
+   "raza": 40.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 64.71,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.5,
+   "no_perro": null,
+   "raza": 37.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 64.71,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 63.5,
+   "no_perro": null,
+   "raza": 34.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 64.71,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.88,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 76.25,
+   "no_perro": null,
+   "raza": 46.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.37,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.88,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.25,
+   "no_perro": null,
+   "raza": 45.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.37,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.88,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.25,
+   "no_perro": null,
+   "raza": 43.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.37,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.88,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 76.25,
+   "no_perro": null,
+   "raza": 39.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.37,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 71.66,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.86,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.22,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 73.75,
+   "no_perro": null,
+   "raza": 45.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 71.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 73.75,
+   "no_perro": null,
+   "raza": 44.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 71.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 73.75,
+   "no_perro": null,
+   "raza": 41.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 71.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.0,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.49,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 73.75,
+   "no_perro": null,
+   "raza": 37.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 87.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 68.45,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 71.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.98,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 46.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.59,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 77.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.98,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 45.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.59,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 77.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.98,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 42.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.59,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 77.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 96.98,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 74.0,
+   "no_perro": null,
+   "raza": 39.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 70.59,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 77.69,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 71.5,
+   "no_perro": null,
+   "raza": 44.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.5,
+   "no_perro": null,
+   "raza": 43.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.5,
+   "no_perro": null,
+   "raza": 41.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.1,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 71.5,
+   "no_perro": null,
+   "raza": 37.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 67.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 70.75,
+   "no_perro": null,
+   "raza": 44.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 70.75,
+   "no_perro": null,
+   "raza": 43.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 70.75,
+   "no_perro": null,
+   "raza": 41.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.02,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 70.75,
+   "no_perro": null,
+   "raza": 37.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 69.52,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 68.25,
+   "no_perro": null,
+   "raza": 43.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 66.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 68.25,
+   "no_perro": null,
+   "raza": 42.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 66.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 68.25,
+   "no_perro": null,
+   "raza": 39.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 66.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.3,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.52,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 68.25,
+   "no_perro": null,
+   "raza": 36.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 66.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 69.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 87.34
+  },
+  "compuestas_perro": {
+   "perro": 64.75,
+   "no_perro": null,
+   "raza": 42.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.78,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 64.75,
+   "no_perro": null,
+   "raza": 41.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.78,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 64.75,
+   "no_perro": null,
+   "raza": 39.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.78,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": false,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.94,
+   "no_perro": 97.05,
+   "raza": 88.2
+  },
+  "compuestas_perro": {
+   "perro": 64.75,
+   "no_perro": null,
+   "raza": 35.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 81.82,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.32,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 65.78,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 87.19
+  },
+  "compuestas_perro": {
+   "perro": 62.25,
+   "no_perro": null,
+   "raza": 40.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 62.57,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.1,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 62.25,
+   "no_perro": null,
+   "raza": 39.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 62.57,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 0.3,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 62.25,
+   "no_perro": null,
+   "raza": 37.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 62.57,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.1,
+   "g_min": 0.5,
+   "centro_animal": true,
+   "margen": 1.0,
+   "detector_min": null
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.56,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 62.25,
+   "no_perro": null,
+   "raza": 34.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 62.57,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 92.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 63.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.2
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.09,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 54.0,
+   "no_perro": null,
+   "raza": 32.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 88.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.14,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 81.54,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 94.99,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.3
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.09,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 46.5,
+   "no_perro": null,
+   "raza": 28.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 79.14,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 95.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.4
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.2,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 41.0,
+   "no_perro": null,
+   "raza": 26.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.75,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.92,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.5
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.27,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 37.25,
+   "no_perro": null,
+   "raza": 23.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.85,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.2
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 52.25,
+   "no_perro": null,
+   "raza": 32.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 89.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.3
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.34,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 45.75,
+   "no_perro": null,
+   "raza": 28.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 77.01,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.4
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.41,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 40.25,
+   "no_perro": null,
+   "raza": 25.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.5,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.5
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.49,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 36.5,
+   "no_perro": null,
+   "raza": 23.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.2
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.34,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 53.5,
+   "no_perro": null,
+   "raza": 32.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 89.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 78.07,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 80.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.3
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.34,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 46.0,
+   "no_perro": null,
+   "raza": 28.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 78.07,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.4
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.41,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 40.5,
+   "no_perro": null,
+   "raza": 25.75
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.94,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 75.38,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.0,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.5
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.45,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 36.75,
+   "no_perro": null,
+   "raza": 23.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.5,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 75.4,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.13,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.5,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.2
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 51.75,
+   "no_perro": null,
+   "raza": 32.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 79.23,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.3
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.45,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 45.25,
+   "no_perro": null,
+   "raza": 28.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 76.47,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 78.46,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.4
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.49,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 39.75,
+   "no_perro": null,
+   "raza": 25.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.33,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 74.62,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.3,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.5
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.52,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 36.0,
+   "no_perro": null,
+   "raza": 23.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 73.8,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 94.0,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 72.31,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.2
+  },
+  "val": {
+   "perro": 99.9,
+   "no_perro": 97.45,
+   "raza": 88.06
+  },
+  "compuestas_perro": {
+   "perro": 51.0,
+   "no_perro": null,
+   "raza": 32.25
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 90.25,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.92,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.3
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.45,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 44.5,
+   "no_perro": null,
+   "raza": 28.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.26,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 74.87,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.5,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 76.15,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.4
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.49,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 39.25,
+   "no_perro": null,
+   "raza": 25.5
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.0,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 68.18,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.73,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 73.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ },
+ {
+  "cfg": {
+   "t_sec": 0.2,
+   "g_min": 0.1,
+   "centro_animal": false,
+   "margen": 0.1,
+   "detector_min": 0.5
+  },
+  "val": {
+   "perro": 99.87,
+   "no_perro": 97.52,
+   "raza": 87.91
+  },
+  "compuestas_perro": {
+   "perro": 35.75,
+   "no_perro": null,
+   "raza": 23.0
+  },
+  "compuestas_no_perro": {
+   "perro": null,
+   "no_perro": 91.75,
+   "raza": null
+  },
+  "oi_orilla_natural": {
+   "perro": 96.08,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_orilla_recorte": {
+   "perro": 63.64,
+   "no_perro": null,
+   "raza": null
+  },
+  "oi_todas": {
+   "perro": 99.2,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_natural": {
+   "perro": 72.19,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_un_perro": {
+   "perro": 93.25,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_orilla_recorte": {
+   "perro": 70.77,
+   "no_perro": null,
+   "raza": null
+  },
+  "coco_no_perro": {
+   "perro": null,
+   "no_perro": 95.26,
+   "raza": null
+  },
+  "coco_otros_animales": {
+   "perro": null,
+   "no_perro": 92.78,
+   "raza": null
+  }
+ }
+]

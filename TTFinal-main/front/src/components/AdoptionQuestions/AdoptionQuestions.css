@@ -1,0 +1,174 @@
+/* Preguntas para quien quiere adoptar */
+.adoption-q {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.adoption-q-item {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+}
+
+/* Pregunta sin contestar: recuadro rojo, como cualquier dato que falta (styles/theme.css). */
+.adoption-q-item.is-missing {
+  border-color: var(--danger);
+  background: #fff4f4;
+  box-shadow: 0 0 0 2px var(--danger);
+}
+
+.adoption-q-item legend {
+  /* Dentro del recuadro (no sobre el borde, como lo pinta el navegador por omision). */
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.adoption-q-num {
+  color: var(--primary);
+}
+
+.adoption-q-options {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.adoption-q-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.adoption-q-option input {
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.adoption-q-option.is-selected {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.adoption-q-item:disabled .adoption-q-option {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.adoption-q-reason {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.adoption-q-missing {
+  display: block;
+  margin-top: 6px;
+  color: #b45309;
+  font-weight: 700;
+}
+
+/* Respuestas que ve quien publicó */
+.adoption-a {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.adoption-a h4 {
+  margin: 0 0 6px;
+  color: var(--primary);
+}
+
+.adoption-a-help,
+.adoption-a-empty {
+  margin: 0 0 10px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.adoption-a-todo {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.adoption-a-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.adoption-a-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+}
+
+.adoption-a-row.is-flagged {
+  background: #fff8eb;
+  border: 1px solid #f3c77a;
+}
+
+.adoption-a-row dt {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.adoption-a-row dd {
+  margin: 0;
+  color: var(--text);
+}
+
+.adoption-a-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #b45309;
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.adoption-a-compact {
+  margin: 6px 0;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  color: var(--text);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 640px) {
+  .adoption-a-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

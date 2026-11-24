@@ -1,0 +1,16 @@
+@startuml
+!include style.iuml
+hide empty description
+state "PENDING\n(pendiente)" as P
+state "APPROVED\n(caso de contacto abierto)" as A
+state "REJECTED\n(rechazada)" as R
+state "Solicitud eliminada" as E <<end>>
+state fin1 <<end>>
+state fin2 <<end>>
+[*] -down-> P : el solicitante envía la solicitud\nPOST /adoption-requests
+P -down-> A : el publicador pulsa «Contactar»\nPOST /cases/adoption/{id}
+P -down-> R : el publicador la cancela (PATCH .../decision)\no el perro fue adoptado por otro solicitante
+P -down-> E : el solicitante la cancela\n(DELETE /adoption-requests/{id})
+A -down-> fin1 : el caso termina: ADOPTED,\nCLOSED o CANCELLED
+R -down-> fin2
+@enduml

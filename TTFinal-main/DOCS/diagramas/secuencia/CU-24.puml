@@ -1,0 +1,94 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-24 Eliminar o desactivar contenido inapropiado
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(controlador del elemento)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador y el contenido existe.
+
+opt FA-24-B: desactivar en lugar de eliminar, desde «Mis Anuncios»
+  U -> W : Seleccionar «Desactivar» en un reporte o publicación
+  activate W
+  W -> A : Desactivar (PATCH /reports/{id}/deactivate\no PATCH /pets/{id}/deactivate)
+  activate A
+  A -> DB : Cambiar a inactivo (UPDATE status = INACTIVE)
+  activate DB
+  DB --> A : Registro actualizado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Reporte desactivado» o «Publicación desactivada»
+  note right of W : Deja de mostrarse al público\ny en la búsqueda de coincidencias.
+  deactivate W
+end
+U -> W : Localizar el contenido en el panel: perro, reporte, solicitud de adopción,\nsolicitud de autorización, caso o cuenta
+activate W
+U -> W : Seleccionar «Borrar» en el elemento o en su detalle
+W --> U : Confirmación «Acción definitiva» con la descripción del elemento
+break FA-24-A: selecciona «Cancelar»
+  W --> U : Conservar el contenido
+end
+U -> W : Seleccionar «Borrar definitivamente»
+alt operación exitosa
+  alt perro
+    W -> A : Eliminar (DELETE /pets/{id})
+    activate A
+  else reporte
+    W -> A : Eliminar (DELETE /reports/{id})
+  else solicitud de adopción
+    W -> A : Eliminar (DELETE /adoption-requests/{id}/admin)
+  else solicitud de autorización
+    W -> A : Eliminar (DELETE /publication-authorizations/{id})
+  else caso
+    W -> A : Eliminar (DELETE /cases/{id})
+  else cuenta
+    W -> A : Eliminar (DELETE /users/{id})
+  end
+  A -> A : Verificar rol de Administrador
+  A -> DB : Eliminar el registro y en cascada sus dependientes\n(fotos de un perro, avisos de un reporte o mensajes de un caso)
+  activate DB
+  DB --> A : Eliminado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Elemento eliminado correctamente» y recargar el panel
+else FA-24-C: error al eliminar
+  W --> U : «No se pudo eliminar el elemento»; conservar el contenido
+end
+deactivate W
+
+note over U, DB : Postcondición: el contenido queda eliminado o inactivo según la acción elegida.
+@enduml

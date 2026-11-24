@@ -1,0 +1,92 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-16 Aprobar solicitud y contactar al adoptante
+autonumber
+
+actor "Responsable de la publicación" as U
+participant "Interfaz web\n(Solicitudes)" as W
+participant "API REST\n(CasesController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor es el responsable de la publicación (Refugio o Usuario general autorizado) y existe una solicitud pendiente.
+
+break FA-16-A: no hay solicitudes para el filtro
+  W --> U : «No hay solicitudes para este filtro»
+end
+U -> W : Seleccionar «Contactar» en una solicitud pendiente
+activate W
+W --> U : Ventana «Antes de contactar al solicitante» con sus respuestas
+ref over U, W : CU-35 Consultar recomendaciones por raza
+break FA-16-B: selecciona «Volver»
+  W --> U : Cerrar la ventana; la solicitud sigue pendiente
+end
+U -> W : Seleccionar «Abrir caso y contactar»
+alt operación exitosa
+  W -> A : Abrir caso de adopción (POST /cases/adoption/{requestId})
+  activate A
+  A -> DB : ¿Existe un caso para la solicitud? (cases)
+  activate DB
+  alt FA-16-C: ya existe un caso
+    DB --> A : Caso existente
+    A --> W : 200 Caso existente
+    W --> U : Abrir el caso existente
+  else no existe
+    DB --> A : No existe
+    deactivate DB
+    A -> DB : Consultar la solicitud y el perro (adoption_requests, pets)
+    activate DB
+    DB --> A : Solicitud y perro
+    deactivate DB
+    A -> DB : Crear caso (INSERT cases: tipo ADOPTION, estado OPEN,\nresponsable y solicitante)
+    activate DB
+    DB --> A : caseId
+    deactivate DB
+    A -> DB : Cambiar la solicitud a APPROVED con la nota\nCONTACT_CASE_OPENED (UPDATE adoption_requests)
+    activate DB
+    DB --> A : Solicitud actualizada
+    deactivate DB
+    A -> DB : Registrar el mensaje y las respuestas del solicitante\ncomo primer mensaje del caso (INSERT case_messages)
+    activate DB
+    DB --> A : Mensaje registrado
+    deactivate DB
+    A --> W : 200 Caso
+    deactivate A
+    W --> U : «Caso de adopción abierto» y dirigir al caso
+  end
+  ref over U, DB : CU-28 Dar seguimiento a casos
+else FA-16-D: error al abrir el caso
+  W --> U : «No se pudo abrir el caso de adopción»;\nla solicitud sigue pendiente
+end
+deactivate W
+
+note over U, DB : Postcondición: la solicitud queda «En contacto» (APPROVED) y existe un caso de adopción entre el responsable y el solicitante.
+@enduml

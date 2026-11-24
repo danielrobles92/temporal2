@@ -1,0 +1,77 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-17 Rechazar solicitud de adopción
+autonumber
+
+actor "Responsable de la publicación" as U
+participant "Interfaz web\n(Solicitudes)" as W
+participant "API REST\n(AdoptionRequestController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor es el responsable de la publicación y existe una solicitud pendiente.
+
+break FA-17-A: no hay solicitudes para el filtro
+  W --> U : «No hay solicitudes para este filtro»
+end
+U -> W : Seleccionar «Cancelar» en una solicitud pendiente
+activate W
+alt operación exitosa
+  W -> A : Decidir solicitud (PATCH /adoption-requests/{id}/decision\n{status: REJECTED, notes: CANCELLED_BY_OWNER})
+  activate A
+  A -> DB : Consultar la solicitud y el perro (adoption_requests, pets)
+  activate DB
+  DB --> A : Solicitud y responsable del perro
+  deactivate DB
+  A -> A : Verificar que sea el responsable de la publicación\no el Administrador (RN-10)
+  break FA-17-B: no es el responsable
+    A --> W : 403 «Solo el responsable de la publicación\npuede decidir la solicitud»
+    W --> U : Mostrar el error
+  end
+  A -> DB : Cambiar el estado a REJECTED (UPDATE adoption_requests)
+  activate DB
+  DB --> A : Solicitud actualizada
+  deactivate DB
+  A ->> DB : Notificar al solicitante «Tu solicitud de adopción fue rechazada»\n(INSERT notifications)
+  A --> W : 200 Solicitud
+  deactivate A
+  W -> A : Recargar solicitudes (GET /adoption-requests/owner/{ownerId})
+  activate A
+  A --> W : 200 Lista
+  deactivate A
+  W --> U : «Solicitud cancelada» y el listado actualizado
+else FA-17-C: error al actualizar
+  W --> U : «No se pudo actualizar la solicitud»; conservar el estado
+end
+deactivate W
+
+note over U, DB : Postcondición: la solicitud queda «Cancelada» (REJECTED) y el solicitante recibe una notificación.
+@enduml

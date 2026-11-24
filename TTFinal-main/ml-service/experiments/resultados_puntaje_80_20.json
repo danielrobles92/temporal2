@@ -1,0 +1,41 @@
+{
+  "pares": {
+    "mismo_perro": 511,
+    "misma_raza": 773,
+    "otro_perro": 6000
+  },
+  "foto_80": {
+    "mismo_perro": {
+      "p5": 16.0,
+      "mediana": 46.0,
+      "p95": 69.0
+    },
+    "misma_raza": {
+      "p5": 15.0,
+      "mediana": 29.0,
+      "p95": 58.0
+    },
+    "otro_perro": {
+      "p5": 0.0,
+      "mediana": 12.0,
+      "p95": 20.0
+    }
+  },
+  "aviso_mas_de_40": {
+    "mismo_perro": {
+      "anterior": 92.6,
+      "80_20_tope_20km": 84.5,
+      "80_20_topes_10_y_20km": 84.5
+    },
+    "misma_raza": {
+      "anterior": 18.4,
+      "80_20_tope_20km": 23.9,
+      "80_20_topes_10_y_20km": 21.0
+    },
+    "otro_perro": {
+      "anterior": 6.0,
+      "80_20_tope_20km": 1.1,
+      "80_20_topes_10_y_20km": 0.9
+    }
+  }
+}

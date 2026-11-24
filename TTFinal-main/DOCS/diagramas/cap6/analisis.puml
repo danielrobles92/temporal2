@@ -1,0 +1,63 @@
+@startuml
+!include style.iuml
+mainframe sd Análisis de una fotografía al publicar
+autonumber
+actor "Usuario" as U
+participant "Interfaz web\n(PublicarMascota +\nDogPhotoAnalysis)" as W
+participant "Backend Spring Boot\n(DogImageGuard,\nImageEmbeddingService,\nMatchScoring)" as B
+participant "ml-service FastAPI\n(DogNet v2, etapa,\nEfficientNetB0)" as M
+database "PostgreSQL\n+ disco uploads/" as DB
+
+U -> W : Agregar de 1 a 4 fotos
+activate W
+W -> B : POST /images/analyze (una foto)
+activate B
+B -> M : POST /describe
+activate M
+M -> M : Vistas: recorte central + secciones a lo largo\ndel lado largo (la foto completa)
+M -> M : DogNet v2: ¿perro? (centro; si no, una sección\nsegura o con un perro del detector);\nraza u «Otro», tamaño; etapa: cachorro o adulto;\ncolores del pelaje (≥ 20 %)
+M --> B : {is_dog, breed, size, age, colors, view, message}
+deactivate M
+B --> W : descripción de la foto
+deactivate B
+alt la foto no es de un perro
+  W --> U : «La imagen no se identifica como un perro.\nNo se puede procesar.» (se bloquea el envío)
+else es un perro
+  W --> U : Sugerencias editables (raza, tamaño, etapa, colores)
+end
+U -> W : Revisar datos y «Publicar Anuncio»
+W -> B : POST /pets o /reports (multipart: datos + fotos)
+activate B
+B -> M : POST /describe por cada foto (DogImageGuard)
+activate M
+M --> B : is_dog
+deactivate M
+break alguna foto no es de un perro
+  B --> W : 422 {error: NOT_A_DOG, message}
+end
+B -> DB : Guardar fotos en uploads/ y el registro
+activate DB
+DB --> B : id del registro
+deactivate DB
+B -> M : POST /analyze por cada foto
+activate M
+M -> M : EfficientNetB0 (ImageNet) → vector 1,280-d (L2)\ndel recorte central; raza, tamaño, etapa y colores
+M --> B : embedding + raza + tamaño + etapa + colores
+deactivate M
+B -> DB : pet_image_embeddings / report_image_embeddings\n(real[1280], raza, tamaño, etapa, colores)
+opt es un reporte de perro perdido o encontrado
+  B -> DB : candidatos: reportes del tipo opuesto\ny perros publicados con sus vectores
+  B -> B : porcentaje = lo que dice la foto (80: parecido, raza,\ntamaño, etapa, colores) + lo que capturaron (20:\nubicación, sexo, raza y color), con topes
+  B -> DB : guardar coincidencias (matches, SUGGESTED)\ny avisar al dueño del otro reporte si pasa de 40 %
+end
+B --> W : registro creado
+deactivate B
+opt es un reporte de perro perdido o encontrado
+  W -> B : GET /reports/{id}/matches
+  activate B
+  B --> W : hasta 10 coincidencias ordenadas por porcentaje
+  deactivate B
+  W --> U : Modal «Posibles coincidencias»: lo que vio la red\nen cada perro y los dos bloques del porcentaje
+end
+deactivate W
+@enduml

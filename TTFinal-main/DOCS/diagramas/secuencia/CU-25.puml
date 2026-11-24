@@ -1,0 +1,113 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-25 Gestionar perfil
+autonumber
+
+actor "Usuario\n(general o Refugio)" as U
+participant "Interfaz web\n(Mi Perfil)" as W
+participant "API REST\n(UserController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión.
+
+U -> W : Acceder a «Mi Perfil»
+activate W
+W -> A : Consultar la cuenta (GET /users/find/{email})
+activate A
+A -> DB : Consultar usuario (users)
+activate DB
+DB --> A : Usuario
+deactivate DB
+A --> W : 200 Cuenta
+deactivate A
+W -> A : Consultar estadísticas (GET /pets/owner/{id} y GET /reports/user/{id})
+activate A
+A --> W : 200 Publicaciones y reportes
+deactivate A
+W --> U : Nombre de usuario, correo, teléfono y estadísticas\n(publicaciones, adoptados, reportes resueltos)
+alt «Editar perfil»
+  U -> W : Seleccionar «Editar perfil»
+  W --> U : Habilitar nombre de usuario y teléfono\n(el correo no se puede modificar)
+  break FA-25-C: selecciona «Cancelar»
+    W --> U : Descartar los cambios y mostrar los datos guardados
+  end
+  U -> W : Modificar datos y seleccionar «Guardar cambios»
+  W -> W : Validar datos
+  break FA-25-D: nombre vacío o con menos de dos caracteres, o teléfono inválido
+    W --> U : Señalar el campo
+  end
+  alt operación exitosa
+    W -> A : Actualizar cuenta (PUT /users/update/{id} {username, phone})
+    activate A
+    A -> A : Verificar que sea el propio usuario o un Administrador
+    A -> DB : Actualizar usuario (UPDATE users)
+    activate DB
+    DB --> A : Usuario actualizado
+    deactivate DB
+    A --> W : 200 Cuenta
+    deactivate A
+    W --> U : «Perfil actualizado exitosamente»
+  else FA-25-E: error al guardar
+    W --> U : Informar la falla y conservar los datos
+  end
+else FA-25-A: «Cambiar contraseña»
+  U -> W : Capturar la nueva contraseña y su confirmación
+  W -> W : Validar (≥ 6 caracteres y coinciden)
+  W -> A : Cambiar contraseña (PUT /users/update/password/{id} {newPassword})
+  activate A
+  A -> A : Cifrar la contraseña (BCrypt)
+  A -> DB : Actualizar contraseña (UPDATE users)
+  activate DB
+  DB --> A : Usuario actualizado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Contraseña actualizada exitosamente»
+else FA-25-B: «Eliminar cuenta»
+  W --> U : Confirmación (la acción no se puede deshacer)
+  U -> W : Confirmar la eliminación
+  W -> A : Eliminar cuenta (DELETE /users/{id})
+  activate A
+  A -> A : Verificar que sea el propio usuario o un Administrador
+  A -> DB : Eliminar usuario (DELETE users)
+  activate DB
+  DB --> A : Usuario eliminado
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W -> W : Cerrar la sesión
+  W --> U : Pantalla de inicio de sesión
+end
+deactivate W
+
+note over U, DB : Postcondición: la información de la cuenta queda actualizada; en caso de eliminación, la cuenta deja de existir y la sesión se cierra.
+@enduml

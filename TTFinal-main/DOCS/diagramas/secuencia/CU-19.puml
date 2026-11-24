@@ -1,0 +1,83 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-19 Supervisar publicaciones
+autonumber
+
+actor "Administrador" as U
+participant "Interfaz web\n(Panel de administración)" as W
+participant "API REST\n(PetsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el actor ha iniciado sesión como Administrador.
+
+U -> W : Acceder al panel de administración
+activate W
+W -> A : Consultar perros registrados (GET /pets?size=9999),\njunto con las demás consultas del panel (CU-39)
+activate A
+A -> DB : Consultar perros (pets, pet_images)
+activate DB
+DB --> A : Perros
+deactivate DB
+A --> W : 200 Lista
+deactivate A
+W --> U : Tabla «Perros registrados» con nombre, estado, ubicación, raza y color
+opt FA-19-A: selecciona el indicador perros registrados, en adopción o adoptados
+  W -> W : Filtrar la tabla
+  W --> U : Perros del indicador
+end
+break FA-19-B: no hay perros
+  W --> U : «No hay perros registrados.»
+end
+U -> W : Revisar y seleccionar «Borrar» en una publicación
+W --> U : Confirmación «Se eliminará esta publicación de perro definitivamente.»
+break FA-19-C: selecciona «Cancelar»
+  W --> U : Conservar la publicación
+end
+U -> W : Seleccionar «Borrar definitivamente»
+alt operación exitosa
+  W -> A : Eliminar publicación (DELETE /pets/{id})
+  activate A
+  A -> A : Verificar rol de Administrador
+  A -> DB : Eliminar (DELETE pets; en cascada fotos,\nembeddings, vacunas y solicitudes)
+  activate DB
+  DB --> A : Eliminada
+  deactivate DB
+  A --> W : 200
+  deactivate A
+  W --> U : «Elemento eliminado correctamente» y actualizar la tabla
+else FA-19-D: error al eliminar
+  W --> U : «No se pudo eliminar el elemento»; conservar la publicación
+end
+deactivate W
+
+note over U, DB : Postcondición: la publicación revisada se conserva o queda eliminada de la plataforma.
+@enduml

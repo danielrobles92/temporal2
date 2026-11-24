@@ -1,0 +1,72 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam backgroundColor #FFFFFF
+skinparam sequenceMessageAlign center
+skinparam ArrowColor #1565C0
+skinparam ArrowThickness 1.3
+skinparam sequence {
+  LifeLineBorderColor #1565C0
+  LifeLineBackgroundColor #D6E6FA
+  ParticipantBorderColor #1565C0
+  ParticipantBackgroundColor #D6E6FA
+  ParticipantFontColor #0D2B4E
+  ActorBorderColor #1565C0
+  ActorBackgroundColor #D6E6FA
+  GroupBorderColor #1565C0
+  GroupBackgroundColor #EEF5FD
+  GroupHeaderFontStyle bold
+  DividerBorderColor #1565C0
+  ReferenceBorderColor #1565C0
+  ReferenceBackgroundColor #EEF5FD
+}
+skinparam database {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+skinparam note {
+  BorderColor #1565C0
+  BackgroundColor #D6E6FA
+}
+mainframe sd CU-03 Consultar perros en adopción
+autonumber
+
+actor "Usuario general" as U
+participant "Interfaz web\n(Adopción)" as W
+participant "API REST\n(PetsController)" as A
+database "Base de datos\n(PostgreSQL)" as DB
+
+note over U, DB : Precondición: el usuario ha iniciado sesión.
+
+U -> W : Acceder a la sección «Adopción»
+activate W
+alt operación exitosa
+  W -> A : Consultar publicaciones (GET /pets?size=9999)
+  activate A
+  A -> DB : Consultar perros con fotos y responsable (pets, pet_images, users)
+  activate DB
+  DB --> A : Publicaciones
+  deactivate DB
+  A --> W : 200 Lista de perros
+  deactivate A
+  W -> W : Aplicar el filtro por omisión (estado Disponible)
+  break FA-03-A: no hay perros registrados
+    W --> U : «No hay perros disponibles.»
+  end
+  W --> U : Carrusel con fotografía, nombre, sexo, edad, raza y ubicación
+  opt FA-03-C: el usuario aplica filtros
+    ref over U, W : CU-04 Filtrar publicaciones
+  end
+  U -> W : Recorrer el carrusel con «Anterior» y «Siguiente»\ny seleccionar «Ver detalle»
+  W --> U : Detalle: fotografías, raza, sexo, edad, tamaño, color,\nubicación, quién lo publicó y descripción
+  opt FA-03-D: solicitar la adopción
+    ref over U, DB : CU-05 Realizar solicitud de adopción
+  end
+else FA-03-B: error al consultar
+  W --> U : Mostrar el mensaje de error en lugar del listado
+end
+deactivate W
+
+note over U, DB : Postcondición: el usuario consulta la información de los perros en adopción sin modificarla.
+@enduml
